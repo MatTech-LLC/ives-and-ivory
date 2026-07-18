@@ -1,0 +1,28 @@
+<script>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    if (!toggle) return;
+
+    function closeMenuInstant() {
+      var header = document.querySelector('.site-header');
+      if (header) header.classList.add('nav-closing');
+      toggle.checked = false;
+      // Allow transitions again after paint if we stayed on this page
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          if (header) header.classList.remove('nav-closing');
+        });
+      });
+    }
+
+    document.querySelectorAll('.site-nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var dest = link.pathname.replace(/\/$/, '') || '/';
+        var here = window.location.pathname.replace(/\/$/, '') || '/';
+        // Leaving the page: keep menu open so the icon doesn't animate mid-navigation
+        if (dest !== here) return;
+        closeMenuInstant();
+      });
+    });
+  })();
+</script>
