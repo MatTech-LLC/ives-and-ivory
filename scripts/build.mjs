@@ -147,7 +147,9 @@ ${renderHead(page).trimEnd()}
 <div style="min-height:100vh">
 ${renderHeader(page.active).trimEnd()}
 
+<main>
 ${body.trim()}
+</main>
 
 ${footer.trimEnd()}
 </div>
