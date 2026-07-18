@@ -7,34 +7,41 @@ const root = join(__dirname, '..');
 const src = join(root, 'src');
 const dist = join(root, 'dist');
 
+const SITE_ORIGIN = 'https://ives-ivory-events.mattech.fyi';
+const OG_IMAGE = '/assets/og.png';
+
 const pages = [
   {
     file: 'index.html',
     out: 'index.html',
+    path: '/',
     active: 'home',
     title: 'Ives & Ivory Events | Destination Weddings & Celebrations',
     description:
-      'Boutique event planning for destination weddings, private celebrations, and corporate gatherings. Based in NYC, available worldwide.',
+      'Destination weddings, private celebrations, corporate events, and every meaningful moment in between, planned with intention and curated with care. Based in NYC, available worldwide.',
   },
   {
     file: 'about.html',
     out: 'about/index.html',
+    path: '/about',
     active: 'about',
     title: 'About | Ives & Ivory Events',
     description:
-      'Meet Mackenzie Ives D\'Amato, founder of Ives & Ivory Events — thoughtful planning, curated experiences, meaningful celebrations.',
+      'Thoughtful planning. Curated experiences. Meaningful celebrations. Meet Mackenzie Ives D\'Amato, founder of Ives & Ivory Events.',
   },
   {
     file: 'services.html',
     out: 'services/index.html',
+    path: '/services',
     active: 'services',
     title: 'Services | Ives & Ivory Events',
     description:
-      'Wedding day and wedding weekend planning, corporate events, and milestone celebrations tailored to your vision.',
+      'Thoughtfully tailored. Entirely bespoke. Wedding day and wedding weekend planning, corporate events, and milestone celebrations as unique as your celebration.',
   },
   {
     file: 'gallery.html',
     out: 'gallery/index.html',
+    path: '/gallery',
     active: 'gallery',
     title: 'Gallery | Ives & Ivory Events',
     description: 'A look inside celebrations planned by Ives & Ivory Events.',
@@ -42,25 +49,37 @@ const pages = [
   {
     file: 'gallery-cliffside.html',
     out: 'gallery/night-before-cliffside/index.html',
+    path: '/gallery/night-before-cliffside',
     active: 'gallery',
     title: 'Night Before Cliffside Soirée | Gallery | Ives & Ivory Events',
-    description: 'Night Before Cliffside Soirée in Cascais, Portugal — a celebration by Ives & Ivory Events.',
+    description: 'Night Before Cliffside Soirée in Cascais, Portugal · O\'Forte — a celebration by Ives & Ivory Events.',
   },
   {
     file: 'contact.html',
     out: 'contact/index.html',
+    path: '/contact',
     active: 'contact',
     title: 'Contact | Ives & Ivory Events',
-    description: 'Inquire about planning your wedding, milestone, or corporate celebration with Ives & Ivory Events.',
+    description:
+      'Let\'s create something meaningful. Tell me about your celebration and I\'ll be in touch within 1–2 business days.',
   },
   {
     file: 'testimonials.html',
     out: 'testimonials/index.html',
+    path: '/testimonials',
     active: 'home',
     title: 'Testimonials | Ives & Ivory Events',
-    description: 'Kind words from couples and clients who planned with Ives & Ivory Events.',
+    description: 'Kind words from the couples and clients of The Ives & Ivory Experience.',
   },
 ];
+
+function escapeAttr(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('"', '&quot;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;');
+}
 
 function activeClass(pageActive, link) {
   return pageActive === link ? ' is-active' : '';
@@ -75,10 +94,40 @@ function renderHeader(active) {
     .replaceAll('{{contactActive}}', activeClass(active, 'contact'));
 }
 
-function renderHead({ title, description }) {
+function renderHead(page) {
+  const canonical = `${SITE_ORIGIN}${page.path === '/' ? '/' : page.path}`;
+  const ogImage = `${SITE_ORIGIN}${OG_IMAGE}`;
   return readFileSync(join(src, 'partials/head.html'), 'utf8')
-    .replaceAll('{{title}}', title)
-    .replaceAll('{{description}}', description);
+    .replaceAll('{{title}}', escapeAttr(page.title))
+    .replaceAll('{{description}}', escapeAttr(page.description))
+    .replaceAll('{{canonical}}', escapeAttr(canonical))
+    .replaceAll('{{ogImage}}', escapeAttr(ogImage));
+}
+
+function writeRobots() {
+  const body = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_ORIGIN}/sitemap.xml
+`;
+  writeFileSync(join(dist, 'robots.txt'), body);
+  console.log('wrote robots.txt');
+}
+
+function writeSitemap() {
+  const urls = pages
+    .map((page) => {
+      const loc = `${SITE_ORIGIN}${page.path === '/' ? '/' : page.path}`;
+      return `  <url>\n    <loc>${loc}</loc>\n  </url>`;
+    })
+    .join('\n');
+  const body = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+  writeFileSync(join(dist, 'sitemap.xml'), body);
+  console.log('wrote sitemap.xml');
 }
 
 if (existsSync(dist)) rmSync(dist, { recursive: true, force: true });
@@ -114,5 +163,7 @@ ${scripts.trimEnd()}
 
 cpSync(join(src, 'styles.css'), join(dist, 'styles.css'));
 cpSync(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
+writeRobots();
+writeSitemap();
 console.log('copied styles.css and assets/');
 console.log('Build complete → dist/');
