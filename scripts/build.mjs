@@ -85,6 +85,7 @@ if (existsSync(dist)) rmSync(dist, { recursive: true, force: true });
 mkdirSync(dist, { recursive: true });
 
 const footer = readFileSync(join(src, 'partials/footer.html'), 'utf8');
+const scripts = readFileSync(join(src, 'partials/scripts.html'), 'utf8');
 
 for (const page of pages) {
   const body = readFileSync(join(src, 'pages', page.file), 'utf8');
@@ -101,6 +102,7 @@ ${body.trim()}
 
 ${footer.trimEnd()}
 </div>
+${scripts.trimEnd()}
 </body>
 </html>
 `;
