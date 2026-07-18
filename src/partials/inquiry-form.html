@@ -1,0 +1,88 @@
+<form id="inquiry-form" class="inquiry-form" novalidate>
+  <div class="hp-field" aria-hidden="true">
+    <label>Company<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+  </div>
+
+  <p class="inquiry-hint">Fields marked with * are required.</p>
+
+  <div class="home-form-grid inquiry-grid">
+    <label class="inquiry-label" for="inquiry-name">Your Name*
+      <input class="inquiry-input" id="inquiry-name" type="text" name="name" required autocomplete="name" maxlength="120" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-partner">Partner's Name (if applicable)
+      <input class="inquiry-input" id="inquiry-partner" type="text" name="partnerName" autocomplete="off" maxlength="120" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-email">Email Address*
+      <input class="inquiry-input" id="inquiry-email" type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-phone">Phone Number
+      <input class="inquiry-input" id="inquiry-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="40" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label inquiry-label--full" for="inquiry-event-type">Event Type*
+      <select class="inquiry-input" id="inquiry-event-type" name="eventType" required autocomplete="off">
+        <option value="">Select…</option>
+        <option>Wedding</option>
+        <option>Destination Wedding</option>
+        <option>Engagement Party</option>
+        <option>Bridal Shower</option>
+        <option>Baby Shower</option>
+        <option>Birthday Celebration</option>
+        <option>Corporate Event</option>
+        <option>Private Dinner</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label class="inquiry-label" for="inquiry-event-date">Event Date
+      <input class="inquiry-input" id="inquiry-event-date" type="date" name="eventDate" autocomplete="off">
+    </label>
+    <label class="inquiry-label" for="inquiry-venue">Venue
+      <input class="inquiry-input" id="inquiry-venue" type="text" name="venue" placeholder="Venue or desired location" autocomplete="off" maxlength="200" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-city-state">City &amp; State
+      <input class="inquiry-input" id="inquiry-city-state" type="text" name="cityState" autocomplete="address-level2" maxlength="120" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-mailing">Mailing Address
+      <input class="inquiry-input" id="inquiry-mailing" type="text" name="mailingAddress" autocomplete="street-address" maxlength="200" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-guests">Estimated Guest Count
+      <input class="inquiry-input" id="inquiry-guests" type="number" name="guestCount" inputmode="numeric" min="1" max="10000" step="1" autocomplete="off" enterkeyhint="next">
+    </label>
+    <label class="inquiry-label" for="inquiry-budget">Estimated Budget
+      <input class="inquiry-input" id="inquiry-budget" type="text" name="budget" autocomplete="off" maxlength="80" enterkeyhint="next">
+    </label>
+  </div>
+
+  <fieldset class="inquiry-fieldset">
+    <legend class="inquiry-legend">Services You're Interested In</legend>
+    <div class="contact-checks inquiry-checks">
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Full-Service Wedding Planning">Full-Service Wedding Planning</label>
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Wedding Management">Wedding Management</label>
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Destination Wedding Planning">Destination Wedding Planning</label>
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Social Event Planning">Social Event Planning</label>
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Corporate &amp; Brand Events">Corporate &amp; Brand Events</label>
+      <label class="inquiry-check"><input type="checkbox" name="services" value="Not Sure Yet">Not Sure Yet</label>
+    </div>
+  </fieldset>
+
+  <label class="inquiry-label inquiry-label--block" for="inquiry-message">About Your Celebration
+    <span class="inquiry-help">A few details about your vision, style, priorities, or anything you'd like me to know.</span>
+    <textarea class="inquiry-input inquiry-textarea" id="inquiry-message" name="message" rows="5" maxlength="5000" autocomplete="off"></textarea>
+  </label>
+
+  <label class="inquiry-label inquiry-label--block" for="inquiry-referral">How Did You Hear
+    <select class="inquiry-input" id="inquiry-referral" name="referralSource" autocomplete="off">
+      <option value="">Select…</option>
+      <option>Instagram</option>
+      <option>Google</option>
+      <option>Friend or Family</option>
+      <option>Vendor Referral</option>
+      <option>Previous Client</option>
+      <option>Other</option>
+    </select>
+  </label>
+
+  <div class="inquiry-actions">
+    <button type="submit" class="navlink inquiry-submit">Begin Your Planning Journey</button>
+    <p class="inquiry-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+  </div>
+</form>

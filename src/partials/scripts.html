@@ -25,4 +25,120 @@
       });
     });
   })();
+
+  (function () {
+    var form = document.getElementById('inquiry-form');
+    if (!form) return;
+
+    var submitBtn = form.querySelector('.inquiry-submit');
+    var statusEl = form.querySelector('.inquiry-status');
+    var defaultLabel = submitBtn ? submitBtn.textContent : '';
+
+    function setStatus(message, kind) {
+      if (!statusEl) return;
+      statusEl.hidden = !message;
+      statusEl.textContent = message || '';
+      statusEl.classList.remove('is-error', 'is-success');
+      if (kind) statusEl.classList.add(kind);
+    }
+
+    function firstInvalid() {
+      return form.querySelector(':invalid');
+    }
+
+    form.addEventListener('input', function (event) {
+      var field = event.target;
+      if (!field || !field.matches || !field.matches('.inquiry-input')) return;
+      if (field.validity.valid) field.removeAttribute('aria-invalid');
+    });
+
+    form.addEventListener('invalid', function (event) {
+      var field = event.target;
+      if (!field || !field.matches || !field.matches('.inquiry-input')) return;
+      field.setAttribute('aria-invalid', 'true');
+    }, true);
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      setStatus('', null);
+      form.classList.add('is-validated');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        var bad = firstInvalid();
+        if (bad && typeof bad.focus === 'function') bad.focus();
+        setStatus('Please fill in the required fields and correct any errors.', 'is-error');
+        return;
+      }
+
+      var data = new FormData(form);
+      var services = data.getAll('services').filter(Boolean);
+      var payload = {
+        website: String(data.get('website') || ''),
+        name: String(data.get('name') || '').trim(),
+        partnerName: String(data.get('partnerName') || '').trim(),
+        email: String(data.get('email') || '').trim(),
+        phone: String(data.get('phone') || '').trim(),
+        eventType: String(data.get('eventType') || '').trim(),
+        eventDate: String(data.get('eventDate') || '').trim(),
+        venue: String(data.get('venue') || '').trim(),
+        cityState: String(data.get('cityState') || '').trim(),
+        mailingAddress: String(data.get('mailingAddress') || '').trim(),
+        guestCount: String(data.get('guestCount') || '').trim(),
+        budget: String(data.get('budget') || '').trim(),
+        services: services,
+        message: String(data.get('message') || '').trim(),
+        referralSource: String(data.get('referralSource') || '').trim(),
+        formPage: window.location.pathname.replace(/\/$/, '') || '/',
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy', 'true');
+        submitBtn.textContent = 'Sending…';
+      }
+
+      fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          return res.json().then(function (json) {
+            return { ok: res.ok && json && json.ok, json: json };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            throw new Error((result.json && result.json.error) || 'Something went wrong');
+          }
+
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              form_id: 'inquiry_form',
+              form_page: payload.formPage,
+              event_type: payload.eventType,
+            });
+          }
+
+          form.reset();
+          form.classList.remove('is-validated');
+          form.querySelectorAll('[aria-invalid]').forEach(function (el) {
+            el.removeAttribute('aria-invalid');
+          });
+          setStatus("Thank you — I've received your inquiry and will be in touch within 1–2 business days.", 'is-success');
+          if (statusEl && typeof statusEl.focus === 'function') statusEl.focus();
+        })
+        .catch(function () {
+          setStatus('Sorry, we could not send your inquiry. Please try again or email events@ivesandivory.com.', 'is-error');
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+            submitBtn.textContent = defaultLabel;
+          }
+        });
+    });
+  })();
 </script>

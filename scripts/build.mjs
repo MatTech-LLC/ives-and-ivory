@@ -135,9 +135,13 @@ mkdirSync(dist, { recursive: true });
 
 const footer = readFileSync(join(src, 'partials/footer.html'), 'utf8');
 const scripts = readFileSync(join(src, 'partials/scripts.html'), 'utf8');
+const inquiryForm = readFileSync(join(src, 'partials/inquiry-form.html'), 'utf8');
 
 for (const page of pages) {
-  const body = readFileSync(join(src, 'pages', page.file), 'utf8');
+  const body = readFileSync(join(src, 'pages', page.file), 'utf8').replaceAll(
+    '{{inquiryForm}}',
+    inquiryForm.trimEnd(),
+  );
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
