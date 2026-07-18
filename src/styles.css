@@ -28,6 +28,9 @@
   .nav-toggle-input:checked ~ .site-header-bar .nav-toggle-icon{background:transparent}
   .nav-toggle-input:checked ~ .site-header-bar .nav-toggle-icon::before{top:0;transform:rotate(45deg)}
   .nav-toggle-input:checked ~ .site-header-bar .nav-toggle-icon::after{top:0;transform:rotate(-45deg)}
+  .site-header.nav-closing .nav-toggle-icon,
+  .site-header.nav-closing .nav-toggle-icon::before,
+  .site-header.nav-closing .nav-toggle-icon::after{transition:none}
   .nav-toggle-spacer{width:40px;flex:none}
   .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2;gap:18px;padding:0 28px;box-sizing:border-box}
   .hero-copy .hero-title{font-size:58px;font-weight:500;letter-spacing:.06em;color:#f4f1eb}
