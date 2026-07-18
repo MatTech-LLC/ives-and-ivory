@@ -45,10 +45,10 @@
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:44px;width:auto}
     .nav-toggle{display:flex}
-    .site-nav{display:none;flex-direction:column;align-items:stretch;height:auto;gap:0;padding:0 0 8px}
+    .site-nav{display:none;flex-direction:column;align-items:stretch;justify-content:flex-start;height:auto;gap:0;padding:0}
     .nav-toggle-input:checked ~ .site-nav{display:flex}
     .site-nav .site-logo-btn{display:none}
-    .site-nav .navlink{width:100%;padding:12px 20px;text-align:center;border-top:1px solid rgba(28,43,61,.08)}
+    .site-nav .navlink{display:flex;justify-content:center;align-items:center;width:100%;box-sizing:border-box;padding:14px 20px;text-align:center;border-top:1px solid rgba(28,43,61,.08);letter-spacing:.08em;padding-left:calc(20px + .08em)}
     .hero-copy{padding:0 24px;gap:14px}
     .hero-copy .hero-title{font-size:clamp(32px,9.5vw,48px)}
     .hero-copy .hero-tagline{font-size:22px}
