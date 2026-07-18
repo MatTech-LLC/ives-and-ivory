@@ -95,6 +95,26 @@
     padding:8px 2px;border-radius:0;width:100%;box-sizing:border-box;
   }
   .inquiry-textarea{border:1px solid rgba(28,43,61,.25);padding:12px;resize:vertical;min-height:120px}
+  .inquiry-input--date{
+    min-height:40px;color-scheme:light;position:relative;
+  }
+  .inquiry-input--date::-webkit-calendar-picker-indicator{
+    cursor:pointer;opacity:1;width:18px;height:18px;
+  }
+  .inquiry-input--number{-moz-appearance:textfield}
+  .inquiry-input--number::-webkit-outer-spin-button,
+  .inquiry-input--number::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .inquiry-affix{
+    display:flex;align-items:center;gap:2px;
+    border-bottom:1px solid rgba(28,43,61,.25);
+  }
+  .inquiry-affix:focus-within{border-color:#7a9cc6;box-shadow:0 1px 0 0 #7a9cc6}
+  .inquiry-affix-prefix{font-size:15px;color:#48576b;flex:none;padding:8px 0}
+  .inquiry-affix .inquiry-input{border-bottom:none;box-shadow:none;padding-left:0}
+  .inquiry-affix .inquiry-input:focus,.inquiry-affix .inquiry-input:focus-visible{box-shadow:none}
+  .inquiry-form.is-validated .inquiry-affix:has(:user-invalid){
+    border-color:#8a3a3a;box-shadow:0 1px 0 0 #8a3a3a;
+  }
   .inquiry-input:focus,.inquiry-input:focus-visible{
     outline:none;border-color:#7a9cc6;box-shadow:0 1px 0 0 #7a9cc6;
   }

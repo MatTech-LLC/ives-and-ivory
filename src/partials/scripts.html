@@ -32,6 +32,10 @@
 
     var submitBtn = form.querySelector('.inquiry-submit');
     var statusEl = form.querySelector('.inquiry-status');
+    var phoneEl = form.querySelector('#inquiry-phone');
+    var guestsEl = form.querySelector('#inquiry-guests');
+    var budgetEl = form.querySelector('#inquiry-budget');
+    var dateEl = form.querySelector('#inquiry-event-date');
     var defaultLabel = submitBtn ? submitBtn.textContent : '';
 
     function setStatus(message, kind) {
@@ -45,6 +49,108 @@
     function firstInvalid() {
       return form.querySelector(':invalid');
     }
+
+    function digitsOnly(value) {
+      return String(value || '').replace(/\D/g, '');
+    }
+
+    function validatePhone() {
+      if (!phoneEl) return true;
+      var value = phoneEl.value.trim();
+      if (!value) {
+        phoneEl.setCustomValidity('');
+        return true;
+      }
+      var digits = digitsOnly(value);
+      if (digits.length < 10 || digits.length > 15 || /[a-zA-Z]/.test(value)) {
+        phoneEl.setCustomValidity('Enter a valid phone number with at least 10 digits.');
+        return false;
+      }
+      phoneEl.setCustomValidity('');
+      return true;
+    }
+
+    function validateGuests() {
+      if (!guestsEl) return true;
+      var value = guestsEl.value.trim();
+      if (!value) {
+        guestsEl.setCustomValidity('');
+        return true;
+      }
+      if (!/^\d+$/.test(value) || Number(value) < 1 || Number(value) > 10000) {
+        guestsEl.setCustomValidity('Enter a whole number of guests between 1 and 10,000.');
+        return false;
+      }
+      guestsEl.setCustomValidity('');
+      return true;
+    }
+
+    function validateBudget() {
+      if (!budgetEl) return true;
+      var value = budgetEl.value.trim();
+      if (!value) {
+        budgetEl.setCustomValidity('');
+        return true;
+      }
+      if (!/^\d+(\.\d{1,2})?$/.test(value) || Number(value) < 0) {
+        budgetEl.setCustomValidity('Enter a dollar amount using numbers only.');
+        return false;
+      }
+      budgetEl.setCustomValidity('');
+      return true;
+    }
+
+    function validateDate() {
+      if (!dateEl) return true;
+      var value = dateEl.value.trim();
+      if (!value) {
+        dateEl.setCustomValidity('');
+        return true;
+      }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(Date.parse(value))) {
+        dateEl.setCustomValidity('Choose a date from the date picker.');
+        return false;
+      }
+      dateEl.setCustomValidity('');
+      return true;
+    }
+
+    function validateSpecialFields() {
+      return validatePhone() && validateGuests() && validateBudget() && validateDate();
+    }
+
+    if (phoneEl) {
+      phoneEl.addEventListener('beforeinput', function (event) {
+        if (event.inputType && event.inputType.indexOf('insert') === 0 && event.data && /[a-zA-Z]/.test(event.data)) {
+          event.preventDefault();
+        }
+      });
+      phoneEl.addEventListener('input', function () {
+        var cleaned = phoneEl.value.replace(/[^\d+\s().-]/g, '');
+        if (cleaned !== phoneEl.value) phoneEl.value = cleaned;
+        validatePhone();
+      });
+    }
+
+    if (guestsEl) {
+      guestsEl.addEventListener('beforeinput', function (event) {
+        if (event.inputType && event.inputType.indexOf('insert') === 0 && event.data && /\D/.test(event.data)) {
+          event.preventDefault();
+        }
+      });
+      guestsEl.addEventListener('input', validateGuests);
+    }
+
+    if (budgetEl) {
+      budgetEl.addEventListener('beforeinput', function (event) {
+        if (event.inputType && event.inputType.indexOf('insert') === 0 && event.data && /[^0-9.]/.test(event.data)) {
+          event.preventDefault();
+        }
+      });
+      budgetEl.addEventListener('input', validateBudget);
+    }
+
+    if (dateEl) dateEl.addEventListener('input', validateDate);
 
     form.addEventListener('input', function (event) {
       var field = event.target;
@@ -62,6 +168,7 @@
       event.preventDefault();
       setStatus('', null);
       form.classList.add('is-validated');
+      validateSpecialFields();
 
       if (!form.checkValidity()) {
         form.reportValidity();
@@ -73,6 +180,8 @@
 
       var data = new FormData(form);
       var services = data.getAll('services').filter(Boolean);
+      var guestRaw = String(data.get('guestCount') || '').trim();
+      var budgetRaw = String(data.get('budget') || '').trim();
       var payload = {
         website: String(data.get('website') || ''),
         name: String(data.get('name') || '').trim(),
@@ -84,8 +193,8 @@
         venue: String(data.get('venue') || '').trim(),
         cityState: String(data.get('cityState') || '').trim(),
         mailingAddress: String(data.get('mailingAddress') || '').trim(),
-        guestCount: String(data.get('guestCount') || '').trim(),
-        budget: String(data.get('budget') || '').trim(),
+        guestCount: guestRaw,
+        budget: budgetRaw ? ('$' + Number(budgetRaw).toLocaleString('en-US')) : '',
         services: services,
         message: String(data.get('message') || '').trim(),
         referralSource: String(data.get('referralSource') || '').trim(),

@@ -16,7 +16,7 @@
       <input class="inquiry-input" id="inquiry-email" type="email" name="email" required autocomplete="email" inputmode="email" maxlength="254" enterkeyhint="next">
     </label>
     <label class="inquiry-label" for="inquiry-phone">Phone Number
-      <input class="inquiry-input" id="inquiry-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="40" enterkeyhint="next">
+      <input class="inquiry-input" id="inquiry-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="20" enterkeyhint="next" pattern="^[+]?[\d\s().-]{7,20}$" title="Enter a valid phone number">
     </label>
     <label class="inquiry-label inquiry-label--full" for="inquiry-event-type">Event Type*
       <select class="inquiry-input" id="inquiry-event-type" name="eventType" required autocomplete="off">
@@ -33,7 +33,7 @@
       </select>
     </label>
     <label class="inquiry-label" for="inquiry-event-date">Event Date
-      <input class="inquiry-input" id="inquiry-event-date" type="date" name="eventDate" autocomplete="off">
+      <input class="inquiry-input inquiry-input--date" id="inquiry-event-date" type="date" name="eventDate" autocomplete="off">
     </label>
     <label class="inquiry-label" for="inquiry-venue">Venue
       <input class="inquiry-input" id="inquiry-venue" type="text" name="venue" placeholder="Venue or desired location" autocomplete="off" maxlength="200" enterkeyhint="next">
@@ -45,10 +45,13 @@
       <input class="inquiry-input" id="inquiry-mailing" type="text" name="mailingAddress" autocomplete="street-address" maxlength="200" enterkeyhint="next">
     </label>
     <label class="inquiry-label" for="inquiry-guests">Estimated Guest Count
-      <input class="inquiry-input" id="inquiry-guests" type="number" name="guestCount" inputmode="numeric" min="1" max="10000" step="1" autocomplete="off" enterkeyhint="next">
+      <input class="inquiry-input inquiry-input--number" id="inquiry-guests" type="number" name="guestCount" inputmode="numeric" min="1" max="10000" step="1" autocomplete="off" enterkeyhint="next" title="Enter a whole number of guests">
     </label>
     <label class="inquiry-label" for="inquiry-budget">Estimated Budget
-      <input class="inquiry-input" id="inquiry-budget" type="text" name="budget" autocomplete="off" maxlength="80" enterkeyhint="next">
+      <span class="inquiry-affix">
+        <span class="inquiry-affix-prefix" aria-hidden="true">$</span>
+        <input class="inquiry-input inquiry-input--number" id="inquiry-budget" type="number" name="budget" inputmode="decimal" min="0" max="100000000" step="1" autocomplete="off" enterkeyhint="next" placeholder="50000" title="Enter a dollar amount">
+      </span>
     </label>
   </div>
 
