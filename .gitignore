@@ -2,3 +2,5 @@
 .env*
 .bundle-tmp
 .DS_Store
+node_modules
+dist

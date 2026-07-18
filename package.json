@@ -1,0 +1,9 @@
+{
+  "name": "ives-and-ivory",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "preview": "python3 -m http.server 4173 --directory dist",
+    "deploy": "vercel --prod"
+  }
+}
