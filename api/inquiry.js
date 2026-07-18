@@ -59,6 +59,35 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Invalid email address' });
   }
 
+  if (payload.phone) {
+    const phoneDigits = payload.phone.replace(/\D/g, '');
+    if (phoneDigits.length < 10 || phoneDigits.length > 15 || /[a-zA-Z]/.test(payload.phone)) {
+      return res.status(400).json({ ok: false, error: 'Invalid phone number' });
+    }
+  }
+
+  if (payload.guestCount && !/^\d+$/.test(payload.guestCount)) {
+    return res.status(400).json({ ok: false, error: 'Guest count must be a whole number' });
+  }
+
+  if (payload.guestCount) {
+    const guests = Number(payload.guestCount);
+    if (guests < 1 || guests > 10000) {
+      return res.status(400).json({ ok: false, error: 'Guest count out of range' });
+    }
+  }
+
+  if (payload.budget) {
+    const budgetDigits = payload.budget.replace(/[$,\s]/g, '');
+    if (!/^\d+(\.\d{1,2})?$/.test(budgetDigits)) {
+      return res.status(400).json({ ok: false, error: 'Invalid budget amount' });
+    }
+  }
+
+  if (payload.eventDate && !/^\d{4}-\d{2}-\d{2}$/.test(payload.eventDate)) {
+    return res.status(400).json({ ok: false, error: 'Invalid event date' });
+  }
+
   const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
   const privateKey = getPrivateKey();
   const sheetId = process.env.GOOGLE_SHEET_ID;
