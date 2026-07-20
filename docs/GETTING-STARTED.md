@@ -11,12 +11,10 @@ Companion guide: once you've got the hang of editing, read
 **[How Changes Go Live](./how-changes-go-live.md)** for a friendly explanation
 of the behind-the-scenes tools (Git, pull requests, and Vercel previews).
 
-> **Is the site hosted yet?** Before edits can go live, the project needs to be
-> connected to **Vercel** (the hosting service). If that hasn't been done — or
-> you're setting it up under a new account — start with
-> **[Connecting the Site to Vercel](./connect-to-vercel.md)**. It's a one-time
-> setup. If the site is already live at `ives-ivory-events.mattech.fyi`, you can
-> skip it.
+> **Hosting is already set up — nothing to configure.** The site is live at
+> `ives-ivory-events.mattech.fyi` and connected to this project through Git, so
+> publishing happens automatically when changes are merged. You don't need to
+> connect Vercel or set anything up. Just start editing.
 
 ---
 
@@ -144,6 +142,16 @@ npm install
 ```
 
 You only rerun that if someone tells you the project's dependencies changed.
+
+**If you were sent a set of secret values (an "env").** You may be given a small
+block of settings that let the inquiry form connect to its Google Sheet. These
+are like passwords — keep them private. To use them locally, save them in a file
+named exactly **`.env`** in the project folder (ask Claude to *"put these env
+values into a `.env` file"* and paste them in). That file is automatically kept
+out of Git, so it's never shared or published. **You don't need it for ordinary
+text and photo edits** — it only matters if you're testing the inquiry form
+locally. The live site already has these values configured, so the real form
+works regardless.
 
 **The everyday local loop.** Two commands:
 

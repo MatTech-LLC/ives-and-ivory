@@ -1,8 +1,17 @@
-# First-Time Setup — Connecting the Site to Vercel
+# Reference — Connecting the Site to Vercel (hosting setup)
 
-**Read this if the website isn't hosted yet, or you're setting up hosting under a
-new account.** This is a one-time setup. Once it's done, you never repeat it —
-from then on, publishing a change is just merging a pull request (see
+> **⚠️ You almost certainly do NOT need this guide.** The site is **already
+> hosted on Vercel and connected to this project**, and it deploys automatically
+> through Git. If you're the new owner just here to edit the site, skip this
+> entirely and read **[Getting Started](./GETTING-STARTED.md)** instead.
+>
+> This document is kept only as a reference for whoever manages hosting — for
+> example, if the site ever needs to be set up again from scratch or moved to a
+> different Vercel account.
+
+**Read this only if the website isn't hosted yet, or you're setting up hosting
+under a new account.** This is a one-time setup. Once it's done, you never repeat
+it — from then on, publishing a change is just merging a pull request (see
 [How Changes Go Live](./how-changes-go-live.md)).
 
 **Vercel** is the service that builds this project and serves it to the public.

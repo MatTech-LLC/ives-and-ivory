@@ -50,7 +50,10 @@ preview and look at the page you changed.
 
 ## How changes go live
 
-The site is hosted on **Vercel** and connected to this GitHub repo:
+**Hosting is already set up.** The site is hosted on **Vercel** and connected to
+this GitHub repo, and deploys happen automatically through Git — the owner never
+needs to touch Vercel, log into a dashboard, or run a deploy command. Do not
+steer the owner toward setting up hosting; it's done.
 
 - Any branch / open pull request gets an automatic **preview deployment** (a
   private URL for that change) — use it to let the owner confirm before shipping.
@@ -62,14 +65,19 @@ and merged to `main`. See the `publish-website` skill for the exact steps.
 
 Live site: `https://ives-ivory-events.mattech.fyi`
 
+The Google Sheets **env vars** (`GOOGLE_SERVICE_ACCOUNT_EMAIL`,
+`GOOGLE_PRIVATE_KEY`, `GOOGLE_SHEET_ID`) are already configured in Vercel, so the
+live inquiry form works. The owner may have been given a copy of these values;
+if they ask, help them save the values into a git-ignored **`.env`** file at the
+project root (only needed for testing the form locally — never commit it). These
+values must never be committed or printed.
+
 **Owner-facing docs** (point the non-technical owner here when useful):
-`README.md`, `docs/GETTING-STARTED.md` (how the site works + how to edit),
-`docs/how-changes-go-live.md` (Git, pull requests, Vercel preview vs.
-production, in plain language), and `docs/connect-to-vercel.md` (one-time
-first-time setup: linking this repo to Vercel, env vars, custom domain). If the
-owner is setting hosting up from scratch, walk them through that last one — note
-the Google Sheets env vars (`GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`,
-`GOOGLE_SHEET_ID`) come from the original setup and must never be committed.
+`README.md`, `docs/GETTING-STARTED.md` (how the site works + how to edit), and
+`docs/how-changes-go-live.md` (Git, pull requests, preview vs. production, in
+plain language). `docs/connect-to-vercel.md` is **reference-only** for
+re-setting-up hosting from scratch — the owner does not need it for normal work,
+so don't send them there unless they're genuinely rebuilding hosting.
 
 ## Editing conventions (match the existing style)
 

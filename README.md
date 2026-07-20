@@ -6,15 +6,18 @@ the change for you in plain English.
 
 Live site: **https://ives-ivory-events.mattech.fyi**
 
+> **The site is already set up and hosted.** You don't need to configure
+> hosting or connect anything — publishing happens automatically through Git.
+> Just start editing.
+>
 > **New here? Start with these guides:**
 > - **[Getting Started](./docs/GETTING-STARTED.md)** — how the site works and
 >   how to edit it, written for non-technical readers.
 > - **[How Changes Go Live](./docs/how-changes-go-live.md)** — a plain-language
->   explanation of Git, pull requests, and Vercel preview vs. production
->   deployments.
-> - **[Connecting the Site to Vercel](./docs/connect-to-vercel.md)** — one-time
->   setup: link this project to Vercel so it's hosted and publishing works.
->   **Do this first if the site isn't hosted yet.**
+>   explanation of Git, pull requests, and preview vs. live versions.
+>
+> *(There's also a [Vercel setup guide](./docs/connect-to-vercel.md), but it's
+> reference-only for whoever manages hosting — you won't need it.)*
 
 ---
 
@@ -86,11 +89,12 @@ thing to check with whoever manages the Vercel account.
 
 ## How the site goes live (hosting)
 
-The site is hosted on **Vercel**, which is connected to this project's GitHub
-repository. Whenever changes reach the **main** branch (by merging a pull
-request), Vercel automatically rebuilds and publishes the live site — usually
-within a minute or two. You don't run any "deploy" button yourself; asking
-Claude to **publish** takes care of getting the change to the right place.
+The site is already hosted on **Vercel** and connected to this project's GitHub
+repository — **that setup is done, and you never have to touch it.** Everything
+happens through Git: whenever changes reach the **main** branch (by merging a
+pull request), Vercel automatically rebuilds and publishes the live site —
+usually within a minute or two. There's no "deploy" button to press and no
+dashboard to log into; asking Claude to **publish** takes care of everything.
 
 Before a change is live, Vercel also builds a private **preview deployment** for
 the pull request — a real URL showing just that change, so you can check it
