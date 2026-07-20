@@ -109,7 +109,66 @@ requests and preview deployments in more depth.
 
 ---
 
-## 6. Publishing (making it live)
+## 6. Working on your own computer (optional)
+
+Most of the time you can work entirely through Claude and never think about this.
+But if you (or a helper) want to run the site **on your own computer** — to make
+edits and see them instantly at a local address before anything is shared — here
+is the whole picture in plain terms.
+
+**What "working locally" means.** You keep a copy of the project on your own
+machine, make changes there, and preview them on your computer only. Nobody else
+can see them. It's the most private sandbox there is — even more so than a
+preview link, because it never leaves your laptop until you publish.
+
+**What you need (one-time setup):**
+
+1. **Node.js** — a free program that runs the site's build. Install the "LTS"
+   version from <https://nodejs.org>. (This is the only real prerequisite.)
+2. **The project on your computer** — a copy of this project's files. If Claude
+   is already running in this project on your machine, you're set. Otherwise a
+   helper can "clone" it from GitHub for you once.
+
+**First-time-only step.** In the project folder, this downloads the building
+blocks the site needs:
+
+```
+npm install
+```
+
+You only rerun that if someone tells you the project's dependencies changed.
+
+**The everyday local loop.** Two commands:
+
+```
+npm run build      # assemble the finished site into the dist/ folder
+npm run preview    # view it at http://localhost:4173 in your browser
+```
+
+`npm run preview` gives you a local web address (`http://localhost:4173`) that
+only works on your computer. Open it in a browser to click through the site.
+When you change a file, run `npm run build` again and refresh the page to see the
+update. To stop the preview, press `Ctrl + C` in the same window.
+
+**The easiest version:** you don't have to type any of these. Once the project is
+on your computer with Node installed, just tell Claude *"build and preview the
+site locally,"* and it runs these for you and points you to the local address.
+
+**Local vs. the preview link vs. live** — three levels, most private to most
+public:
+
+- **Local (your computer)** — only you can see it; nothing is shared.
+- **Preview deployment (a pull request link)** — a private URL you can share for
+  a second opinion; still not the live site.
+- **Production (live)** — the real website at `ives-ivory-events.mattech.fyi`,
+  updated only when you publish.
+
+Working locally is entirely optional. Editing through Claude and checking the
+preview link is enough for most changes.
+
+---
+
+## 7. Publishing (making it live)
 
 When the preview looks good, tell Claude to *"publish it"* (or approve/merge the
 pull request). Merging the change is what tells Vercel to update the **real**
@@ -121,7 +180,7 @@ private/incognito window, so you're not seeing an old saved copy in your browser
 
 ---
 
-## 7. A few things to leave alone (or ask about first)
+## 8. A few things to leave alone (or ask about first)
 
 You really can't hurt anything through previews. But a few areas are more
 delicate, so let Claude handle them carefully and ask if you're unsure:
@@ -139,7 +198,7 @@ delicate, so let Claude handle them carefully and ask if you're unsure:
 
 ---
 
-## 8. If something looks broken
+## 9. If something looks broken
 
 - A preview looked wrong? Just ask Claude to fix it — the live site is untouched
   until you publish.
