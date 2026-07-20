@@ -12,14 +12,24 @@ description: >-
 
 # Publishing the Ives & Ivory website
 
-The site is hosted on **Vercel**, connected to this GitHub repo. When commits
-reach the **`main`** branch, Vercel automatically rebuilds and deploys —
-usually within a minute or two. Publishing therefore means: verify the change,
-then get it committed and pushed through the normal review flow so it reaches
-`main`. There is no manual "deploy" button to press.
+The site is hosted on **Vercel**, connected to this GitHub repo. Two deployment
+types matter:
+
+- **Preview deployment** — Vercel automatically builds any branch / pull request
+  at its own private URL, separate from the live site. This is the safe way for
+  the owner to see a change on a real address before it ships.
+- **Production deployment** — the live site at `ives-ivory-events.mattech.fyi`,
+  rebuilt automatically **only when a change lands on the `main` branch** (i.e.
+  when a pull request is merged).
+
+So publishing means: verify the change, push it to a branch and open a pull
+request (which gets a preview URL), let the owner confirm on the preview, then
+merge to `main` so production updates. There is no manual "deploy" button to
+press. The plain-language version of all this is in
+`docs/how-changes-go-live.md` — point the owner there if they're unsure.
 
 The owner is non-technical, so **confirm before anything irreversible**
-(pushing, opening/merging a pull request) and explain each step plainly.
+(pushing, opening a PR, and especially merging) and explain each step plainly.
 
 ## Step 1 — verify it builds and looks right
 
@@ -57,18 +67,25 @@ git push -u origin update-<short-description>
 If a push fails due to a transient network error, retry a few times with a short
 backoff before giving up.
 
-## Step 4 — get it onto main so it deploys
+## Step 4 — open a pull request and share the preview
 
-Ask the owner whether they'd like you to **open a pull request** (recommended —
-gives them a visible review + merge button) or whether they'll merge another
-way. Only open or merge a PR when they ask you to. Once the change is merged into
-`main`, Vercel picks it up automatically.
+Ask the owner if they'd like you to **open a pull request** (recommended — it
+gives a visible review + merge button, and a preview URL). Only open a PR when
+they ask you to.
 
-## Step 5 — confirm it went live
+Once the PR is open, **Vercel automatically builds a preview deployment** — a
+private URL showing just this change, separate from the live site. Point the
+owner to it (Vercel posts the link on the PR) so they can confirm the change on a
+real address before it ships. If they want tweaks, make them on the same branch
+and push again — the preview refreshes automatically.
 
-After the change reaches `main`, deployment takes a minute or two. Tell the owner
-to refresh **https://ives-ivory-events.mattech.fyi** (a hard refresh, or a
-private window, avoids seeing a cached old copy) and check the change is there.
+## Step 5 — merge to go live, then confirm
+
+Merging the pull request into `main` is what triggers the **production
+deployment** (the live site). Only merge when the owner approves. After merging,
+production takes a minute or two to build. Tell the owner to refresh
+**https://ives-ivory-events.mattech.fyi** (a hard refresh, or a private window,
+avoids seeing a cached old copy) and check the change is there.
 
 If a change touched the **inquiry form**, remind them to submit one test inquiry
 and confirm the row lands in the Google Sheet with the value in the right

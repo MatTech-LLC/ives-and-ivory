@@ -50,13 +50,22 @@ preview and look at the page you changed.
 
 ## How changes go live
 
-The site is hosted on **Vercel** and connected to this GitHub repo. When
-commits land on the **`main`** branch, Vercel automatically rebuilds and
-deploys. So "publishing" = getting the change committed and pushed so it
-reaches `main` (usually via a pull request the owner merges). See the
-`publish-website` skill for the exact steps.
+The site is hosted on **Vercel** and connected to this GitHub repo:
+
+- Any branch / open pull request gets an automatic **preview deployment** (a
+  private URL for that change) — use it to let the owner confirm before shipping.
+- Merging a pull request into **`main`** triggers the **production deployment**
+  (the live site).
+
+So "publishing" = getting the change committed, pushed to a branch, previewed,
+and merged to `main`. See the `publish-website` skill for the exact steps.
 
 Live site: `https://ives-ivory-events.mattech.fyi`
+
+**Owner-facing docs** (point the non-technical owner here when useful):
+`README.md`, `docs/GETTING-STARTED.md` (how the site works + how to edit), and
+`docs/how-changes-go-live.md` (Git, pull requests, Vercel preview vs.
+production, in plain language).
 
 ## Editing conventions (match the existing style)
 

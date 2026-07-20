@@ -6,6 +6,13 @@ the change for you in plain English.
 
 Live site: **https://ives-ivory-events.mattech.fyi**
 
+> **New here? Start with these two guides:**
+> - **[Getting Started](./docs/GETTING-STARTED.md)** — how the site works and
+>   how to edit it, written for non-technical readers.
+> - **[How Changes Go Live](./docs/how-changes-go-live.md)** — a plain-language
+>   explanation of Git, pull requests, and Vercel preview vs. production
+>   deployments.
+
 ---
 
 ## The short version (if you read nothing else)
@@ -77,10 +84,16 @@ thing to check with whoever manages the Vercel account.
 ## How the site goes live (hosting)
 
 The site is hosted on **Vercel**, which is connected to this project's GitHub
-repository. Whenever changes reach the main copy of the project, Vercel
-automatically rebuilds and publishes the site — usually within a minute or two.
-You don't run any "deploy" button yourself; asking Claude to **publish** takes
-care of getting the change to the right place.
+repository. Whenever changes reach the **main** branch (by merging a pull
+request), Vercel automatically rebuilds and publishes the live site — usually
+within a minute or two. You don't run any "deploy" button yourself; asking
+Claude to **publish** takes care of getting the change to the right place.
+
+Before a change is live, Vercel also builds a private **preview deployment** for
+the pull request — a real URL showing just that change, so you can check it
+without affecting visitors. The full walkthrough of branches, pull requests, and
+preview vs. production deployments is in
+**[How Changes Go Live](./docs/how-changes-go-live.md)**.
 
 ---
 
