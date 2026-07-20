@@ -11,6 +11,13 @@ Companion guide: once you've got the hang of editing, read
 **[How Changes Go Live](./how-changes-go-live.md)** for a friendly explanation
 of the behind-the-scenes tools (Git, pull requests, and Vercel previews).
 
+> **Is the site hosted yet?** Before edits can go live, the project needs to be
+> connected to **Vercel** (the hosting service). If that hasn't been done — or
+> you're setting it up under a new account — start with
+> **[Connecting the Site to Vercel](./connect-to-vercel.md)**. It's a one-time
+> setup. If the site is already live at `ives-ivory-events.mattech.fyi`, you can
+> skip it.
+
 ---
 
 ## 1. What this website is

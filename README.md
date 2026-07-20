@@ -6,12 +6,15 @@ the change for you in plain English.
 
 Live site: **https://ives-ivory-events.mattech.fyi**
 
-> **New here? Start with these two guides:**
+> **New here? Start with these guides:**
 > - **[Getting Started](./docs/GETTING-STARTED.md)** — how the site works and
 >   how to edit it, written for non-technical readers.
 > - **[How Changes Go Live](./docs/how-changes-go-live.md)** — a plain-language
 >   explanation of Git, pull requests, and Vercel preview vs. production
 >   deployments.
+> - **[Connecting the Site to Vercel](./docs/connect-to-vercel.md)** — one-time
+>   setup: link this project to Vercel so it's hosted and publishing works.
+>   **Do this first if the site isn't hosted yet.**
 
 ---
 

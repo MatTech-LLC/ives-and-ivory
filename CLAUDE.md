@@ -63,9 +63,13 @@ and merged to `main`. See the `publish-website` skill for the exact steps.
 Live site: `https://ives-ivory-events.mattech.fyi`
 
 **Owner-facing docs** (point the non-technical owner here when useful):
-`README.md`, `docs/GETTING-STARTED.md` (how the site works + how to edit), and
+`README.md`, `docs/GETTING-STARTED.md` (how the site works + how to edit),
 `docs/how-changes-go-live.md` (Git, pull requests, Vercel preview vs.
-production, in plain language).
+production, in plain language), and `docs/connect-to-vercel.md` (one-time
+first-time setup: linking this repo to Vercel, env vars, custom domain). If the
+owner is setting hosting up from scratch, walk them through that last one — note
+the Google Sheets env vars (`GOOGLE_SERVICE_ACCOUNT_EMAIL`, `GOOGLE_PRIVATE_KEY`,
+`GOOGLE_SHEET_ID`) come from the original setup and must never be committed.
 
 ## Editing conventions (match the existing style)
 
