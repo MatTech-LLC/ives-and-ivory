@@ -9,11 +9,8 @@
   .navlink{font-family:'Cormorant Garamond';font-size:18px;font-weight:600;letter-spacing:.08em;color:#7a9cc6;cursor:pointer;background:none;border:none;padding:0;font-style:normal;text-transform:uppercase}
   .navlink:hover{color:#3a5170}
   .ii-slideshow{position:absolute;inset:0;overflow:hidden}
-  .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:ii-fade 12s infinite}
-  @keyframes ii-fade{0%,21%{opacity:1}25%,96%{opacity:0}100%{opacity:1}}
-  @media (min-width:769px){
-    .ii-slide-hero{background-size:140%;background-position:85% center}
-  }
+  .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:ii-fade 21s infinite}
+  @keyframes ii-fade{0%,12.4%{opacity:1}14.3%,99%{opacity:0}100%{opacity:1}}
   .container{max-width:760px;margin:0 auto;padding:0 32px}
   .divider{width:36px;height:1px;background:#c9b98f;margin:28px auto}
   .quotemark{font-family:'Cormorant Garamond';font-size:64px;color:#c7d5e8;line-height:1;font-style:italic}
@@ -75,7 +72,6 @@
     .hero-copy .hero-title{font-size:clamp(32px,9.5vw,48px)}
     .hero-copy .hero-tagline{font-size:22px}
     .hero-copy .hero-lede{font-size:17px;line-height:1.6}
-    .ii-slide-hero{background-position:100% center}
     .container{padding:0 20px}
     .services-page{padding:56px 0 80px}
     .services-panel,.services-panel-alt{padding:28px 20px}
