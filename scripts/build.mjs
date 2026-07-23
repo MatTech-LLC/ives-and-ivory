@@ -91,8 +91,8 @@ const pages = [
     out: 'gallery/ceremony/index.html',
     path: '/gallery/ceremony',
     active: 'gallery',
-    title: 'The Palace Ceremony | Gallery | Ives & Ivory Events',
-    description: 'The Palace Ceremony at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
+    title: 'A Palace Ceremony | Gallery | Ives & Ivory Events',
+    description: 'A Palace Ceremony at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
   },
   {
     file: 'gallery-cocktail-hour.html',
