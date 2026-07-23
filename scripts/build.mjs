@@ -95,6 +95,14 @@ const pages = [
     description: 'The Palace Ceremony at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-cocktail-hour.html',
+    out: 'gallery/cocktail-hour/index.html',
+    path: '/gallery/cocktail-hour',
+    active: 'gallery',
+    title: 'Cocktail Hour in the Gardens | Gallery | Ives & Ivory Events',
+    description: 'Cocktail Hour in the Gardens at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
