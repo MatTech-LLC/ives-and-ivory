@@ -9,7 +9,7 @@
   .navlink{font-family:'Cormorant Garamond';font-size:18px;font-weight:600;letter-spacing:.08em;color:#7a9cc6;cursor:pointer;background:none;border:none;padding:0;font-style:normal;text-transform:uppercase}
   .navlink:hover{color:#3a5170}
   .ii-slideshow{position:absolute;inset:0;overflow:hidden}
-  .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:ii-fade 16s infinite}
+  .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:ii-fade 12s infinite}
   @keyframes ii-fade{0%,21%{opacity:1}25%,96%{opacity:0}100%{opacity:1}}
   @media (min-width:769px){
     .ii-slide-hero{background-size:140%;background-position:85% center}
