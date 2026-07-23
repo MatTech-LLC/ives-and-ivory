@@ -87,6 +87,14 @@ const pages = [
     description: 'Intimate Engagement Gathering on Seabrook Island, Charleston, South Carolina — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-ceremony.html',
+    out: 'gallery/ceremony/index.html',
+    path: '/gallery/ceremony',
+    active: 'gallery',
+    title: 'The Ceremony | Gallery | Ives & Ivory Events',
+    description: 'The Ceremony at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
