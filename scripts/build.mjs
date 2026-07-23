@@ -55,6 +55,14 @@ const pages = [
     description: 'Night Before Cliffside Soirée in Cascais, Portugal · O\'Forte — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-welcome-celebration.html',
+    out: 'gallery/welcome-celebration/index.html',
+    path: '/gallery/welcome-celebration',
+    active: 'gallery',
+    title: 'Welcome Celebration | Gallery | Ives & Ivory Events',
+    description: 'Welcome Celebration in Cascais Town Square, Portugal · Aqafarina Restaurant — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
