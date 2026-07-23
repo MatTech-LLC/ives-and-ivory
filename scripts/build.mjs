@@ -67,8 +67,8 @@ const pages = [
     out: 'gallery/rehearsal-dinner/index.html',
     path: '/gallery/rehearsal-dinner',
     active: 'gallery',
-    title: 'A Magical Rooftop Rehearsal Dinner | Gallery | Ives & Ivory Events',
-    description: 'A Magical Rooftop Rehearsal Dinner in Cascais, Portugal · Copo Alto Rooftop — a celebration by Ives & Ivory Events.',
+    title: 'A Rooftop Rehearsal Dinner | Gallery | Ives & Ivory Events',
+    description: 'A Rooftop Rehearsal Dinner in Cascais, Portugal · Copo Alto Rooftop — a celebration by Ives & Ivory Events.',
   },
   {
     file: 'gallery-art-of-getting-ready.html',
