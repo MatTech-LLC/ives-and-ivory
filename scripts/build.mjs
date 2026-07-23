@@ -71,6 +71,14 @@ const pages = [
     description: 'Rehearsal Dinner in Cascais, Portugal · Copo Alto Rooftop — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-art-of-getting-ready.html',
+    out: 'gallery/art-of-getting-ready/index.html',
+    path: '/gallery/art-of-getting-ready',
+    active: 'gallery',
+    title: 'The Art of Getting Ready | Gallery | Ives & Ivory Events',
+    description: 'The Art of Getting Ready in Cascais, Portugal · Albatroz Hotel — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
