@@ -103,6 +103,14 @@ const pages = [
     description: 'Cocktail Hour in the Gardens at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-reception.html',
+    out: 'gallery/reception/index.html',
+    path: '/gallery/reception',
+    active: 'gallery',
+    title: 'A Royal Reception | Gallery | Ives & Ivory Events',
+    description: 'A Royal Reception at Palácio de Queluz, Loures, Portugal — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
