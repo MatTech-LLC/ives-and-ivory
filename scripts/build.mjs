@@ -79,6 +79,14 @@ const pages = [
     description: 'The Art of Getting Ready in Cascais, Portugal · Albatroz Hotel — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-engagement-gathering.html',
+    out: 'gallery/engagement-gathering/index.html',
+    path: '/gallery/engagement-gathering',
+    active: 'gallery',
+    title: 'Intimate Engagement Gathering | Gallery | Ives & Ivory Events',
+    description: 'Intimate Engagement Gathering on Seabrook Island, Charleston, South Carolina — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
