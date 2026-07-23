@@ -63,6 +63,14 @@ const pages = [
     description: 'Welcome Celebration in Cascais Town Square, Portugal · Aqafarina Restaurant — a celebration by Ives & Ivory Events.',
   },
   {
+    file: 'gallery-rehearsal-dinner.html',
+    out: 'gallery/rehearsal-dinner/index.html',
+    path: '/gallery/rehearsal-dinner',
+    active: 'gallery',
+    title: 'Rehearsal Dinner | Gallery | Ives & Ivory Events',
+    description: 'Rehearsal Dinner in Cascais, Portugal · Copo Alto Rooftop — a celebration by Ives & Ivory Events.',
+  },
+  {
     file: 'contact.html',
     out: 'contact/index.html',
     path: '/contact',
