@@ -47,9 +47,22 @@
   .services-panel-alt{background:#fffdfa;border:1px solid rgba(28,43,61,.12);border-radius:4px;padding:60px 50px}
   .wedding-split{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;margin-top:30px;position:relative}
   .wedding-split::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(58,81,112,.2);transform:translateX(-50%)}
-  .wedding-col{background:#fff;border:1px solid rgba(28,43,61,.1);border-radius:4px;padding:40px 34px;display:flex;flex-direction:column;gap:32px}
-  .wedding-col-intro{text-align:center}
-  .list-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:15px;line-height:1.9;color:#48576b}
+  .wedding-col{background:#fff;border:1px solid rgba(28,43,61,.1);border-radius:4px;padding:40px 34px;display:flex;flex-direction:column;gap:28px}
+  .wedding-col-intro{text-align:center;padding-bottom:28px;border-bottom:1px solid rgba(58,81,112,.14)}
+  .service-package{background:#f9fafc;border:1px solid rgba(58,81,112,.14);border-radius:6px;padding:26px 24px}
+  .service-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:14px}
+  .service-badge.is-complete{color:#3a5170;background:#e4edf7}
+  .service-badge.is-partial{color:#8a6d3b;background:#f0e6d2}
+  .service-package h4{font-size:22px;margin:0 0 10px}
+  .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:#48576b;margin:0}
+  .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a97a8;margin:20px 0 10px;font-weight:600}
+  .service-includes{list-style:none;margin:0;padding:0;font-size:15px;line-height:1.85;color:#48576b;columns:2;column-gap:20px}
+  .service-includes li{padding-left:19px;position:relative;margin-bottom:5px;break-inside:avoid}
+  .service-includes li::before{content:"✓";position:absolute;left:0;color:#7a9cc6;font-weight:600}
+  .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:#48576b;margin:0 0 12px}
+  .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:15px;line-height:1.9;color:#48576b;margin:0;padding:0}
+  .list-grid-2 li{padding-left:19px;position:relative}
+  .list-grid-2 li::before{content:"✓";position:absolute;left:0;color:#7a9cc6;font-weight:600}
   @media (max-width:768px){
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:44px;width:auto}
@@ -71,6 +84,8 @@
     .wedding-split::before{display:none}
     .wedding-col{padding:28px 20px;gap:28px}
     .list-grid-2{grid-template-columns:1fr}
+    .service-includes,.list-grid-2{text-align:left;columns:1}
+    .service-includes-note{text-align:left}
   }
   a.navlink, a.site-logo-btn{display:inline-block;text-decoration:none}
   a.site-logo-btn{line-height:0}
