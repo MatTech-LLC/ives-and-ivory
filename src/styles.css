@@ -72,7 +72,6 @@
     .kind-words-heading .eyebrow{text-align:center !important}
     .kind-words-quote{font-size:16px !important;line-height:1.55 !important}
     .kind-words-quotes{gap:22px !important}
-    .kind-words-quote-right{border-right:none !important;border-left:2px solid #7a9cc6 !important;padding-right:0 !important;padding-left:24px !important;text-align:left !important}
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:66px;width:auto}
     .nav-toggle{display:flex}
