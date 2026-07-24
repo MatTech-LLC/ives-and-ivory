@@ -118,7 +118,7 @@
     .site-nav .navlink.is-active::after{content:"";position:absolute;left:50%;bottom:0;width:14px;height:1px;background:currentColor;transform:translateX(-50%);opacity:.75}
     .my-story-photo{float:left;width:480px;aspect-ratio:3/2;margin:6px 40px 24px 0}
     .services-hero{height:auto !important;max-height:560px;aspect-ratio:2/1}
-    .services-hero-img{object-position:50% 42% !important}
+    .services-hero-img{object-position:35% 22% !important}
   }
   .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 36px;text-align:left}
   .gallery-photo-grid{column-count:2;column-gap:28px}
