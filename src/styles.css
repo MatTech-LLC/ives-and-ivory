@@ -120,8 +120,6 @@
     .my-story-photo{float:left;width:480px;aspect-ratio:3/2;margin:6px 40px 24px 0}
     .services-hero{height:auto !important;max-height:560px;aspect-ratio:3/2}
     .services-hero-img{object-position:50% 50% !important}
-    .services-hero-overlay{padding-top:88px !important;align-items:flex-start !important}
-    .services-hero-textbox{background:rgba(255,253,250,.72);padding:26px 40px;border-radius:2px;margin-left:38%}
   }
   .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 36px;text-align:left}
   .gallery-photo-grid{column-count:2;column-gap:28px}
