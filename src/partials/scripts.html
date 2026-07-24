@@ -348,3 +348,30 @@
     });
   })();
 </script>
+<script>
+  (function () {
+    var slides = document.querySelectorAll('.ii-slideshow .ii-slide');
+    if (!slides.length) return;
+    var idx = 0;
+    var HOLD_MS = 4100;
+    var TRANSITION_MS = 1000;
+    setInterval(function () {
+      var current = slides[idx];
+      var nextIdx = (idx + 1) % slides.length;
+      var next = slides[nextIdx];
+      current.classList.remove('is-active');
+      current.classList.add('is-prev');
+      next.classList.add('is-active');
+      (function (leaving) {
+        setTimeout(function () {
+          leaving.classList.remove('is-prev');
+          leaving.style.transition = 'none';
+          leaving.style.transform = 'translateX(100%)';
+          void leaving.offsetWidth;
+          leaving.style.transition = '';
+        }, TRANSITION_MS);
+      })(current);
+      idx = nextIdx;
+    }, HOLD_MS + TRANSITION_MS);
+  })();
+</script>
