@@ -189,10 +189,10 @@
   .inquiry-check{display:flex;gap:8px;align-items:center;font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b}
   .inquiry-actions{text-align:center;margin-top:48px}
   .inquiry-submit{
-    font-size:18px;border:1px solid #7a9cc6;padding:16px 40px;border-radius:2px;
-    background:#7a9cc6;color:#fffdfa;
+    font-size:18px;border:1px solid #3a5170;padding:16px 40px;border-radius:2px;
+    background:#3a5170;color:#fffdfa;
   }
-  .inquiry-submit:hover{color:#fffdfa;background:#6a8cb6}
+  .inquiry-submit:hover{color:#fffdfa;background:#2c3f57}
   .inquiry-submit:focus-visible{outline:2px solid #3a5170;outline-offset:3px}
   .inquiry-status{font-family:'Cormorant Garamond';font-size:17px;line-height:1.5;margin:18px 0 0;color:#48576b}
   .inquiry-status.is-error{color:#8a3a3a}
