@@ -1,5 +1,39 @@
 <script>
   (function () {
+    var rotator = document.querySelector('.experience-rotator');
+    if (!rotator) return;
+
+    var texts = Array.prototype.slice.call(rotator.querySelectorAll('.experience-rotator-text'));
+    var dots = Array.prototype.slice.call(rotator.querySelectorAll('.experience-dot'));
+    var current = 0;
+    var timer = null;
+
+    function show(index) {
+      texts[current].classList.remove('is-active');
+      dots[current].classList.remove('is-active');
+      current = (index + texts.length) % texts.length;
+      texts[current].classList.add('is-active');
+      dots[current].classList.add('is-active');
+    }
+
+    function startAutoplay() {
+      if (timer) clearInterval(timer);
+      timer = setInterval(function () {
+        show(current + 1);
+      }, 4500);
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        startAutoplay();
+      });
+    });
+
+    startAutoplay();
+  })();
+
+  (function () {
     var grids = document.querySelectorAll('.gallery-photo-grid');
     if (!grids.length) return;
 
