@@ -66,6 +66,8 @@
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px;font-size:15px;line-height:1.9;color:#48576b;margin:0;padding:0}
   .list-grid-2 li{padding-left:19px;position:relative}
   .list-grid-2 li::before{content:"✓";position:absolute;left:0;color:#7a9cc6;font-weight:600}
+  .wedding-enhancements-grid li{padding-left:22px}
+  .wedding-enhancements-grid li::before{content:"";position:absolute;left:1px;top:9px;width:6px;height:6px;background:#7a9cc6;transform:rotate(45deg)}
   @media (max-width:768px){
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:66px;width:auto}
@@ -86,6 +88,7 @@
     .wedding-tab-label{font-size:11px;padding:12px 14px}
     .wedding-col{padding:28px 20px;gap:28px}
     .list-grid-2{grid-template-columns:1fr}
+    .wedding-enhancements-grid{grid-template-columns:1fr 1fr;gap:8px 16px}
     .service-includes,.list-grid-2{text-align:left;columns:1}
     .service-includes-note{text-align:left}
     .service-package p{text-align:left}
