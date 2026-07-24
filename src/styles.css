@@ -2,11 +2,11 @@
   h1,h2,h3,h4,h5,h6{margin:0;font-size:inherit;font-weight:inherit;line-height:inherit}
   blockquote{margin:0;padding:0;border:0}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  a{color:#7a9cc6;text-decoration:none}
+  a{color:#3a5170;text-decoration:none}
   a:hover{color:#3a5170}
   .eyebrow{font-family:'Cormorant Garamond';font-style:italic;font-weight:400;font-size:23px;letter-spacing:.08em;color:#3a5170;text-transform:uppercase;text-align:center}
   .serif-h{font-family:'Cormorant Garamond';font-weight:300;color:#1c2b3d}
-  .navlink{font-family:'Cormorant Garamond';font-size:18px;font-weight:600;letter-spacing:.08em;color:#7a9cc6;cursor:pointer;background:none;border:none;padding:0;font-style:normal;text-transform:uppercase}
+  .navlink{font-family:'Cormorant Garamond';font-size:18px;font-weight:600;letter-spacing:.08em;color:#3a5170;cursor:pointer;background:none;border:none;padding:0;font-style:normal;text-transform:uppercase}
   .navlink:hover{color:#3a5170}
   .ii-slideshow{position:absolute;inset:0;overflow:hidden}
   .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:ii-fade 21s infinite}
@@ -23,7 +23,7 @@
   .site-logo-btn img{height:74px;width:auto;display:block;filter:brightness(0.72) saturate(1.15)}
   .site-nav{display:flex;justify-content:space-evenly;align-items:center;height:92px;padding:0 28px;box-sizing:border-box}
   .nav-toggle-input{position:absolute;opacity:0;pointer-events:none}
-  .nav-toggle{display:none;width:40px;height:40px;padding:0;border:none;background:none;cursor:pointer;color:#7a9cc6;align-items:center;justify-content:center}
+  .nav-toggle{display:none;width:40px;height:40px;padding:0;border:none;background:none;cursor:pointer;color:#3a5170;align-items:center;justify-content:center}
   .nav-toggle-icon{position:relative;display:block;width:22px;height:2px;background:currentColor;transition:background .2s ease}
   .nav-toggle-icon::before,.nav-toggle-icon::after{content:"";position:absolute;left:0;width:22px;height:2px;background:currentColor;transition:transform .2s ease,top .2s ease}
   .nav-toggle-icon::before{top:-7px}
@@ -46,7 +46,7 @@
   .wedding-tab-switch{display:flex;justify-content:center;gap:0;margin:30px auto 0;max-width:420px;border:1px solid rgba(58,81,112,.3);border-radius:30px;overflow:hidden}
   .wedding-tab-label{flex:1;text-align:center;padding:13px 20px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#3a5170;cursor:pointer;transition:background .2s ease,color .2s ease}
   #tab-wedding-day:checked ~ .wedding-tab-switch label[for="tab-wedding-day"],
-  #tab-wedding-weekend:checked ~ .wedding-tab-switch label[for="tab-wedding-weekend"]{background:#7a9cc6;color:#fffdfa}
+  #tab-wedding-weekend:checked ~ .wedding-tab-switch label[for="tab-wedding-weekend"]{background:#3a5170;color:#fffdfa}
   .wedding-tab-panel{display:none;margin-top:34px}
   #tab-wedding-day:checked ~ #panel-wedding-day{display:block}
   #tab-wedding-weekend:checked ~ #panel-wedding-weekend{display:block}
@@ -121,7 +121,7 @@
   .experience-rotator-text.is-active{opacity:1;transform:translateY(-50%);pointer-events:auto}
   .experience-rotator-dots{display:flex;justify-content:center;gap:10px;margin-top:22px}
   .experience-dot{width:7px;height:7px;border-radius:50%;background:rgba(58,81,112,.25);cursor:pointer;transition:background .3s ease,transform .3s ease;border:none;padding:0}
-  .experience-dot.is-active{background:#7a9cc6;transform:scale(1.2)}
+  .experience-dot.is-active{background:#3a5170;transform:scale(1.2)}
   @media (min-width:769px){
     .site-nav .nav-home-link{display:none}
     .site-nav .navlink{position:relative;padding-bottom:4px}
@@ -134,7 +134,7 @@
   .gallery-photo-grid{column-count:2;column-gap:28px}
   .gallery-card{border:none;background:none;padding:0;text-align:left;color:inherit;text-decoration:none;display:block}
   .gallery-card:hover .serif-h{color:#3a5170}
-  .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e4edf7;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#7a9cc6;padding:16px;box-sizing:border-box;text-align:center}
+  .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e4edf7;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#3a5170;padding:16px;box-sizing:border-box;text-align:center}
   .page-pad{padding:100px 0 120px;background:#fffdfa}
   .cta-link{display:inline-block}
   .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
@@ -166,7 +166,7 @@
     display:flex;align-items:center;gap:2px;
     border-bottom:1px solid rgba(28,43,61,.25);
   }
-  .inquiry-affix:focus-within{border-color:#7a9cc6;box-shadow:0 1px 0 0 #7a9cc6}
+  .inquiry-affix:focus-within{border-color:#3a5170;box-shadow:0 1px 0 0 #3a5170}
   .inquiry-affix-prefix{font-family:'Cormorant Garamond',serif;font-size:15px;color:#48576b;flex:none;padding:8px 0}
   .inquiry-affix .inquiry-input{border-bottom:none;box-shadow:none;padding-left:0}
   .inquiry-affix .inquiry-input:focus,.inquiry-affix .inquiry-input:focus-visible{box-shadow:none}
@@ -174,9 +174,9 @@
     border-color:#8a3a3a;box-shadow:0 1px 0 0 #8a3a3a;
   }
   .inquiry-input:focus,.inquiry-input:focus-visible{
-    outline:none;border-color:#7a9cc6;box-shadow:0 1px 0 0 #7a9cc6;
+    outline:none;border-color:#3a5170;box-shadow:0 1px 0 0 #3a5170;
   }
-  .inquiry-textarea:focus,.inquiry-textarea:focus-visible{box-shadow:inset 0 0 0 1px #7a9cc6}
+  .inquiry-textarea:focus,.inquiry-textarea:focus-visible{box-shadow:inset 0 0 0 1px #3a5170}
   .inquiry-form.is-validated .inquiry-input:user-invalid{
     border-color:#8a3a3a;box-shadow:0 1px 0 0 #8a3a3a;
   }
