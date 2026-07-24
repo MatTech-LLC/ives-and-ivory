@@ -65,7 +65,7 @@
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-family:'Cormorant Garamond';font-size:17px;line-height:1.9;color:#48576b;margin:0;padding:0}
   .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
   @media (max-width:768px){
-    .about-hero-heading{font-size:28px}
+    .about-hero-heading{font-size:28px !important}
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:66px;width:auto}
     .nav-toggle{display:flex}
