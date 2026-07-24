@@ -144,6 +144,7 @@ function activeClass(pageActive, link) {
 function renderHeader(active) {
   let header = readFileSync(join(src, 'partials/header.html'), 'utf8');
   return header
+    .replaceAll('{{homeActive}}', activeClass(active, 'home'))
     .replaceAll('{{aboutActive}}', activeClass(active, 'about'))
     .replaceAll('{{galleryActive}}', activeClass(active, 'gallery'))
     .replaceAll('{{servicesActive}}', activeClass(active, 'services'))

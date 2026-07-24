@@ -87,6 +87,7 @@
   a.site-logo-btn{line-height:0}
   .navlink.is-active{color:#3a5170}
   @media (min-width:769px){
+    .site-nav .nav-home-link{display:none}
     .site-nav .navlink{position:relative;padding-bottom:4px}
     .site-nav .navlink.is-active{color:#3a5170}
     .site-nav .navlink.is-active::after{content:"";position:absolute;left:50%;bottom:0;width:14px;height:1px;background:currentColor;transform:translateX(-50%);opacity:.75}
