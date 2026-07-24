@@ -184,7 +184,7 @@
     border-color:#8a3a3a;box-shadow:inset 0 0 0 1px #8a3a3a;
   }
   .inquiry-fieldset{border:none;margin:36px 0 0;padding:0;min-width:0}
-  .inquiry-legend{font-family:'Cormorant Garamond',serif;font-size:16px;color:#48576b;padding:0;margin:0 0 12px}
+  .inquiry-legend{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;font-style:normal;letter-spacing:normal;text-transform:none;color:#48576b;padding:0;margin:0 0 12px}
   .inquiry-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:15px;color:#1c2b3d}
   .inquiry-check{display:flex;gap:8px;align-items:center;font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b}
   .inquiry-actions{text-align:center;margin-top:48px}
