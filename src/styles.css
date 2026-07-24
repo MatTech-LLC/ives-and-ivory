@@ -68,7 +68,7 @@
   .list-grid-2 li::before{content:"✓";position:absolute;left:0;color:#7a9cc6;font-weight:600}
   @media (max-width:768px){
     .site-header-bar{display:flex}
-    .site-header-bar .site-logo-btn img{height:44px;width:auto}
+    .site-header-bar .site-logo-btn img{height:56px;width:auto}
     .nav-toggle{display:flex}
     .site-nav{display:none;flex-direction:column;align-items:stretch;justify-content:flex-start;height:auto;gap:0;padding:0}
     .nav-toggle-input:checked ~ .site-nav{display:flex}
@@ -88,6 +88,7 @@
     .list-grid-2{grid-template-columns:1fr}
     .service-includes,.list-grid-2{text-align:left;columns:1}
     .service-includes-note{text-align:left}
+    .service-package p{text-align:left}
   }
   a.navlink, a.site-logo-btn{display:inline-block;text-decoration:none}
   a.site-logo-btn{line-height:0}
@@ -99,6 +100,7 @@
     .site-nav .navlink.is-active::after{content:"";position:absolute;left:50%;bottom:0;width:14px;height:1px;background:currentColor;transform:translateX(-50%);opacity:.75}
   }
   .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 36px;text-align:left}
+  .gallery-photo-grid{column-count:2;column-gap:28px}
   .gallery-card{border:none;background:none;padding:0;text-align:left;color:inherit;text-decoration:none;display:block}
   .gallery-card:hover .serif-h{color:#3a5170}
   .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e8eef5;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#7a9cc6;padding:16px;box-sizing:border-box;text-align:center}
@@ -168,4 +170,6 @@
     .page-pad{padding:56px 0 80px}
     .home-form-grid,.inquiry-grid{grid-template-columns:1fr !important}
     .contact-checks,.inquiry-checks{grid-template-columns:1fr !important}
+    .gallery-photo-grid{column-count:1}
+    .marquee-track img{width:200px !important;height:150px !important}
   }
