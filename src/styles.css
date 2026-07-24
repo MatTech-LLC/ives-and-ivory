@@ -18,10 +18,10 @@
   @keyframes marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
   .site-header{position:sticky;top:0;background:#fffdfa;z-index:50;border-bottom:1px solid rgba(28,43,61,.1)}
-  .site-header-bar{display:none;align-items:center;justify-content:space-between;height:64px;padding:0 16px;box-sizing:border-box}
+  .site-header-bar{display:none;align-items:center;justify-content:space-between;height:80px;padding:0 16px;box-sizing:border-box}
   .site-logo-btn{display:block;background:none;border:none;padding:0;cursor:pointer;line-height:0}
-  .site-logo-btn img{height:48px;width:auto;display:block;filter:brightness(0.72) saturate(1.15)}
-  .site-nav{display:flex;justify-content:space-evenly;align-items:center;height:64px;padding:0 28px;box-sizing:border-box}
+  .site-logo-btn img{height:62px;width:auto;display:block;filter:brightness(0.72) saturate(1.15)}
+  .site-nav{display:flex;justify-content:space-evenly;align-items:center;height:80px;padding:0 28px;box-sizing:border-box}
   .nav-toggle-input{position:absolute;opacity:0;pointer-events:none}
   .nav-toggle{display:none;width:40px;height:40px;padding:0;border:none;background:none;cursor:pointer;color:#7a9cc6;align-items:center;justify-content:center}
   .nav-toggle-icon{position:relative;display:block;width:22px;height:2px;background:currentColor;transition:background .2s ease}
@@ -39,7 +39,7 @@
   .hero-copy .hero-title{font-size:58px;font-weight:500;letter-spacing:.06em;color:#f4f1eb}
   .hero-copy .hero-tagline{font-style:italic;font-size:26px;letter-spacing:.02em;color:#fff;font-weight:400;text-wrap:pretty;text-shadow:0 2px 10px rgba(0,0,0,.35)}
   .hero-copy .hero-lede{font-size:19px;line-height:1.7;color:#fff;max-width:640px;text-wrap:pretty;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,.35)}
-  .services-page{padding:0 0 120px}
+  .services-page{padding:0 0 120px;background:#fffdfa}
   .services-panel{padding:0}
   .services-panel-alt{padding:0}
   .wedding-tab-input{position:absolute;opacity:0;pointer-events:none}
@@ -68,7 +68,7 @@
   .list-grid-2 li::before{content:"✓";position:absolute;left:0;color:#7a9cc6;font-weight:600}
   @media (max-width:768px){
     .site-header-bar{display:flex}
-    .site-header-bar .site-logo-btn img{height:56px;width:auto}
+    .site-header-bar .site-logo-btn img{height:66px;width:auto}
     .nav-toggle{display:flex}
     .site-nav{display:none;flex-direction:column;align-items:stretch;justify-content:flex-start;height:auto;gap:0;padding:0}
     .nav-toggle-input:checked ~ .site-nav{display:flex}
