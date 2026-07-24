@@ -66,9 +66,8 @@
   .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
   @media (max-width:768px){
     .about-hero-heading{font-size:32px !important;line-height:1.45 !important}
-    .experience-rotator-card{padding:48px 28px;min-height:180px}
-    .experience-rotator-card::before{top:8px;left:16px;font-size:44px}
-    .experience-rotator-text{left:20px;right:20px;font-size:19px}
+    .experience-rotator-card{padding:36px 22px 32px;min-height:150px}
+    .experience-rotator-text{left:18px;right:18px;font-size:17px}
     .kind-words-heading{order:-1;text-align:center}
     .kind-words-heading .eyebrow{text-align:center !important}
     .kind-words-quote{font-size:16px !important;line-height:1.55 !important}
@@ -101,12 +100,12 @@
   a.site-logo-btn{line-height:0}
   .navlink.is-active{color:#3a5170}
   .my-story-photo{width:100%;aspect-ratio:3/2;overflow:hidden;margin:0 0 24px;border-radius:2px}
-  .experience-rotator{max-width:680px;margin:0 auto}
-  .experience-rotator-card{position:relative;border:1px solid rgba(58,81,112,.2);border-radius:6px;padding:64px 56px;min-height:150px;display:flex;align-items:center;justify-content:center;text-align:center;background:#fffdfa;box-shadow:0 18px 40px -20px rgba(28,43,61,.18)}
-  .experience-rotator-card::before{content:"\201C";position:absolute;top:14px;left:26px;font-family:'Cormorant Garamond';font-size:56px;color:#c9b98f;line-height:1}
-  .experience-rotator-text{position:absolute;left:56px;right:56px;opacity:0;transform:translateY(6px);transition:opacity .5s ease,transform .5s ease;font-family:'Cormorant Garamond';font-style:italic;font-size:24px;line-height:1.5;color:#1c2b3d;margin:0;pointer-events:none}
-  .experience-rotator-text.is-active{position:relative;left:auto;right:auto;opacity:1;transform:translateY(0);pointer-events:auto}
-  .experience-rotator-dots{display:flex;justify-content:center;gap:10px;margin-top:26px}
+  .experience-rotator{max-width:620px;margin:0 auto}
+  .experience-rotator-card{position:relative;border:1px solid rgba(58,81,112,.2);border-radius:6px;padding:44px 48px 40px;min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#fffdfa;box-shadow:0 18px 40px -20px rgba(28,43,61,.18);cursor:pointer;user-select:none}
+  .experience-rotator-flourish{display:block;margin:0 auto 14px}
+  .experience-rotator-text{position:absolute;left:48px;right:48px;top:50%;transform:translateY(calc(-50% + 6px));opacity:0;transition:opacity .5s ease,transform .5s ease;font-family:'Cormorant Garamond';font-style:italic;font-size:21px;line-height:1.5;color:#1c2b3d;margin:0;pointer-events:none}
+  .experience-rotator-text.is-active{opacity:1;transform:translateY(-50%);pointer-events:auto}
+  .experience-rotator-dots{display:flex;justify-content:center;gap:10px;margin-top:22px}
   .experience-dot{width:7px;height:7px;border-radius:50%;background:rgba(58,81,112,.25);cursor:pointer;transition:background .3s ease,transform .3s ease;border:none;padding:0}
   .experience-dot.is-active{background:#7a9cc6;transform:scale(1.2)}
   @media (min-width:769px){

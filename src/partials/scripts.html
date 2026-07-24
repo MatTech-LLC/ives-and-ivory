@@ -23,12 +23,22 @@
       }, 4500);
     }
 
+    var card = rotator.querySelector('.experience-rotator-card');
+
     dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
+      dot.addEventListener('click', function (event) {
+        event.stopPropagation();
         show(i);
         startAutoplay();
       });
     });
+
+    if (card) {
+      card.addEventListener('click', function () {
+        show(current + 1);
+        startAutoplay();
+      });
+    }
 
     startAutoplay();
   })();
