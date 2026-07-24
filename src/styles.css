@@ -52,16 +52,16 @@
   #tab-wedding-weekend:checked ~ #panel-wedding-weekend{display:block}
   .wedding-col{background:#fffdfa;border:1px solid rgba(28,43,61,.1);border-radius:4px;padding:40px 34px;display:flex;flex-direction:column;gap:28px;max-width:640px;margin:0 auto}
   .wedding-col-intro{text-align:center;padding-bottom:28px;border-bottom:1px solid rgba(58,81,112,.14)}
-  .service-package{background:#e4edf7;border:1px solid rgba(58,81,112,.14);border-radius:6px;padding:26px 24px}
+  .service-package{background:#3a5170;border:1px solid #3a5170;border-radius:6px;padding:26px 24px}
   .service-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:14px}
-  .service-badge.is-complete{color:#3a5170;background:#e4edf7}
-  .service-badge.is-partial{color:#8a6d3b;background:#f0e6d2}
-  .service-package h4{font-size:22px;margin:0 0 10px}
-  .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:#48576b;margin:0}
-  .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a97a8;margin:20px 0 10px;font-weight:600}
-  .service-includes{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond';font-size:17px;line-height:1.85;color:#48576b;columns:2;column-gap:20px}
-  .service-includes li{border-left:2px solid #3a5170;padding-left:12px;margin-bottom:5px;break-inside:avoid}
-  .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:#48576b;margin:0 0 12px}
+  .service-badge.is-complete{color:#fffdfa;background:rgba(255,253,250,.16)}
+  .service-badge.is-partial{color:#fffdfa;background:rgba(255,253,250,.16)}
+  .service-package h4{font-size:22px;margin:0 0 10px;color:#fffdfa}
+  .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:rgba(255,253,250,.85);margin:0}
+  .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,253,250,.7);margin:20px 0 10px;font-weight:600}
+  .service-includes{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond';font-size:17px;line-height:1.85;color:#fffdfa;columns:2;column-gap:20px}
+  .service-includes li{border-left:2px solid rgba(255,253,250,.5);padding-left:12px;margin-bottom:5px;break-inside:avoid}
+  .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:rgba(255,253,250,.85);margin:0 0 12px}
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-family:'Cormorant Garamond';font-size:17px;line-height:1.9;color:#48576b;margin:0;padding:0}
   .list-grid-2 li{border-left:2px solid #3a5170;padding-left:12px}
   @media (max-width:768px){
