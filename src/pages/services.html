@@ -1,20 +1,33 @@
 <div class="services-page">
       <h1 class="sr-only">Wedding, Corporate &amp; Milestone Event Planning Services</h1>
+
+      <div style="position:relative;width:100%;height:48vh;overflow:hidden">
+        <img src="/assets/ceremony-aerial-full-estate-overview.jpg" alt="Aerial view of Palácio de Queluz and its gardens" style="width:100%;height:100%;object-fit:cover;display:block">
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,25,38,.55) 0%,rgba(15,25,38,0) 45%);display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:36px;gap:10px">
+          <div class="eyebrow" style="color:#fff">Our Services</div>
+          <h2 class="serif-h" style="font-size:36px;color:#fff;text-align:center;margin:0;max-width:640px;padding:0 20px">Thoughtfully tailored. Entirely bespoke.</h2>
+        </div>
+      </div>
+
       <div class="container" style="max-width:1100px">
-        <div class="eyebrow">Our Services</div>
-        <h2 class="serif-h" style="font-size:44px;text-align:center;margin:16px 0 8px">Thoughtfully tailored. Entirely bespoke.</h2>
-        <p style="font-family:'Cormorant Garamond';font-size:19px;line-height:1.7;color:#48576b;text-align:center;max-width:640px;margin:24px auto 0">No two celebrations are alike, and neither is the planning behind them.</p>
+        <p style="font-family:'Cormorant Garamond';font-size:19px;line-height:1.7;color:#48576b;text-align:center;max-width:640px;margin:40px auto 0">No two celebrations are alike, and neither is the planning behind them.</p>
         <p style="font-family:'Cormorant Garamond';font-size:19px;line-height:1.7;color:#48576b;text-align:center;max-width:640px;margin:16px auto 48px">Every event has its own vision, priorities, and level of support required. That's why each Ives &amp; Ivory proposal is thoughtfully customized after our initial consultation. The collections below serve as a starting point, allowing us to tailor a planning experience that's as unique as your celebration.</p>
 
         <div class="services-panel">
           <h2 class="eyebrow" style="text-align:center;color:#3a5170;font-size:30px">The Wedding Collection</h2>
           <div class="divider" style="background:#7a9cc6"></div>
 
-          <div class="wedding-split">
+          <input type="radio" name="wedding-tab" id="tab-wedding-day" class="wedding-tab-input" checked>
+          <input type="radio" name="wedding-tab" id="tab-wedding-weekend" class="wedding-tab-input">
+          <div class="wedding-tab-switch">
+            <label for="tab-wedding-day" class="wedding-tab-label">Wedding Day</label>
+            <label for="tab-wedding-weekend" class="wedding-tab-label">Wedding Weekend</label>
+          </div>
+
+          <div class="wedding-tab-panel" id="panel-wedding-day">
             <div class="wedding-col">
               <div class="wedding-col-intro">
-                <h3 class="eyebrow" style="text-align:center;color:#3a5170;font-size:24px">Wedding <b style="text-decoration:underline;text-underline-offset:3px">Day</b></h3>
-                <p class="serif-h" style="font-size:24px;margin:10px 0 16px;text-align:center">For celebrations centered around your wedding day</p>
+                <p class="serif-h" style="font-size:24px;margin:0 0 16px;text-align:center">For celebrations centered around your wedding day</p>
                 <p style="font-family:'Cormorant Garamond';font-size:17px;line-height:1.7;color:#48576b;margin:0 auto;text-align:center">Whether you're looking for a planning partner from the very beginning or simply someone to bring your vision to life in the final weeks, our Wedding Day Collection offers support tailored to where you are in the planning process.</p>
               </div>
               <div class="service-package">
@@ -43,11 +56,12 @@
                 </ul>
               </div>
             </div>
+          </div>
 
+          <div class="wedding-tab-panel" id="panel-wedding-weekend">
             <div class="wedding-col">
               <div class="wedding-col-intro">
-                <h3 class="eyebrow" style="text-align:center;color:#3a5170;font-size:24px">Wedding <b style="text-decoration:underline;text-underline-offset:3px">Weekend</b></h3>
-                <p class="serif-h" style="font-size:24px;margin:10px 0 16px;text-align:center">For destination weddings and multi-day celebrations</p>
+                <p class="serif-h" style="font-size:24px;margin:0 0 16px;text-align:center">For destination weddings and multi-day celebrations</p>
                 <p style="font-family:'Cormorant Garamond';font-size:17px;line-height:1.7;color:#48576b;margin:0 auto;text-align:center">Designed for couples creating an immersive experience that extends beyond the wedding day. From welcome cocktails to farewell brunches, we'll ensure every event feels cohesive, effortless, and unforgettable.</p>
               </div>
               <div class="service-package">
