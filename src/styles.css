@@ -60,12 +60,10 @@
   .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:#48576b;margin:0}
   .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a97a8;margin:20px 0 10px;font-weight:600}
   .service-includes{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond';font-size:17px;line-height:1.85;color:#48576b;columns:2;column-gap:20px}
-  .service-includes li{display:flex;align-items:baseline;gap:9px;margin-bottom:5px;break-inside:avoid}
-  .service-includes li::before{content:"\2726";color:#7a9cc6;font-size:11px;flex:none}
+  .service-includes li{border-left:2px solid #b9c9e0;padding-left:12px;margin-bottom:5px;break-inside:avoid}
   .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:#48576b;margin:0 0 12px}
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-family:'Cormorant Garamond';font-size:17px;line-height:1.9;color:#48576b;margin:0;padding:0}
-  .list-grid-2 li{display:flex;align-items:baseline;gap:9px}
-  .list-grid-2 li::before{content:"\2726";color:#7a9cc6;font-size:11px;flex:none}
+  .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
   @media (max-width:768px){
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:66px;width:auto}
