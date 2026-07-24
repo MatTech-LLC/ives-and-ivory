@@ -139,18 +139,18 @@
   .cta-link{display:inline-block}
   .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .inquiry-form{max-width:100%}
-  .inquiry-hint{font-size:13px;color:#8a97a8;margin:0 0 28px;text-align:center}
+  .inquiry-hint{font-family:'Cormorant Garamond',serif;font-size:15px;color:#48576b;margin:0 0 28px;text-align:center}
   .inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
   .inquiry-label{display:flex;flex-direction:column;gap:6px;font-family:'Cormorant Garamond',serif;font-size:16px;color:#48576b}
   .inquiry-label--full{grid-column:1/-1}
   .inquiry-label--block{margin-top:28px}
-  .inquiry-help{font-size:13px;color:#8a97a8}
+  .inquiry-help{font-family:'Cormorant Garamond',serif;font-size:15px;color:#48576b}
   .inquiry-input{
     font-family:'Jost',system-ui,sans-serif;font-size:15px;color:#1c2b3d;
     border:none;border-bottom:1px solid rgba(28,43,61,.25);background:transparent;
     padding:8px 2px;border-radius:0;width:100%;box-sizing:border-box;
   }
-  select.inquiry-input{font-family:'Cormorant Garamond',serif;font-size:17px}
+  select.inquiry-input{font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b}
   select.inquiry-input option{font-family:'Cormorant Garamond',serif}
   .inquiry-textarea{border:1px solid rgba(28,43,61,.25);padding:12px;resize:vertical;min-height:120px}
   .inquiry-input--date{
@@ -167,7 +167,7 @@
     border-bottom:1px solid rgba(28,43,61,.25);
   }
   .inquiry-affix:focus-within{border-color:#7a9cc6;box-shadow:0 1px 0 0 #7a9cc6}
-  .inquiry-affix-prefix{font-size:15px;color:#48576b;flex:none;padding:8px 0}
+  .inquiry-affix-prefix{font-family:'Cormorant Garamond',serif;font-size:15px;color:#48576b;flex:none;padding:8px 0}
   .inquiry-affix .inquiry-input{border-bottom:none;box-shadow:none;padding-left:0}
   .inquiry-affix .inquiry-input:focus,.inquiry-affix .inquiry-input:focus-visible{box-shadow:none}
   .inquiry-form.is-validated .inquiry-affix:has(:user-invalid){
@@ -184,9 +184,9 @@
     border-color:#8a3a3a;box-shadow:inset 0 0 0 1px #8a3a3a;
   }
   .inquiry-fieldset{border:none;margin:36px 0 0;padding:0;min-width:0}
-  .inquiry-legend{font-size:13px;color:#48576b;padding:0;margin:0 0 12px}
+  .inquiry-legend{font-family:'Cormorant Garamond',serif;font-size:16px;color:#48576b;padding:0;margin:0 0 12px}
   .inquiry-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:15px;color:#1c2b3d}
-  .inquiry-check{display:flex;gap:8px;align-items:center;font-family:'Cormorant Garamond',serif;font-size:17px;color:#1c2b3d}
+  .inquiry-check{display:flex;gap:8px;align-items:center;font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b}
   .inquiry-actions{text-align:center;margin-top:48px}
   .inquiry-submit{
     font-size:18px;border:1px solid #7a9cc6;padding:16px 40px;border-radius:2px;
