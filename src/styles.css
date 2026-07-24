@@ -66,6 +66,8 @@
   .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
   @media (max-width:768px){
     .about-hero-heading{font-size:32px !important;line-height:1.45 !important}
+    .experience-grid{grid-template-columns:1fr;gap:16px}
+    .experience-card{padding:28px 24px}
     .kind-words-heading{order:-1;text-align:center}
     .kind-words-heading .eyebrow{text-align:center !important}
     .kind-words-quote{font-size:16px !important;line-height:1.55 !important}
@@ -98,6 +100,8 @@
   a.site-logo-btn{line-height:0}
   .navlink.is-active{color:#3a5170}
   .my-story-photo{width:100%;aspect-ratio:3/2;overflow:hidden;margin:0 0 24px;border-radius:2px}
+  .experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .experience-card{border:1px solid rgba(58,81,112,.16);border-radius:4px;padding:36px 32px}
   @media (min-width:769px){
     .site-nav .nav-home-link{display:none}
     .site-nav .navlink{position:relative;padding-bottom:4px}
