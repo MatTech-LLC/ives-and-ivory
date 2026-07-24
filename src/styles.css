@@ -91,7 +91,7 @@
     .hero-copy .hero-title{font-size:clamp(32px,9.5vw,48px)}
     .hero-copy .hero-tagline{font-size:22px}
     .hero-copy .hero-lede{font-size:17px;line-height:1.6}
-    .hero-scroll-cue{display:flex;position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;opacity:.85;animation:hero-scroll-bounce 2.2s ease-in-out infinite}
+    .hero-scroll-cue{display:flex;position:absolute;left:50%;bottom:44px;transform:translateX(-50%);z-index:2;opacity:.85;animation:hero-scroll-bounce 2.2s ease-in-out infinite}
     .container{padding:0 20px}
     .services-page{padding:0 0 80px}
     .services-panel,.services-panel-alt{padding:0}
