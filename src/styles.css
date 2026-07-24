@@ -170,6 +170,6 @@
     .page-pad{padding:56px 0 80px}
     .home-form-grid,.inquiry-grid{grid-template-columns:1fr !important}
     .contact-checks,.inquiry-checks{grid-template-columns:1fr !important}
-    .gallery-photo-grid{column-count:1}
+    .gallery-photo-grid{column-count:2;column-gap:16px}
     .marquee-track img{width:200px !important;height:150px !important}
   }
