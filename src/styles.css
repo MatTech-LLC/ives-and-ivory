@@ -66,6 +66,10 @@
   .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
   @media (max-width:768px){
     .about-hero-heading{font-size:32px !important;line-height:1.45 !important}
+    .kind-words-heading{order:-1;text-align:center}
+    .kind-words-heading .eyebrow{text-align:center !important}
+    .kind-words-quote{font-size:16px !important;line-height:1.55 !important}
+    .kind-words-quotes{gap:22px !important}
     .site-header-bar{display:flex}
     .site-header-bar .site-logo-btn img{height:66px;width:auto}
     .nav-toggle{display:flex}
