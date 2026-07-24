@@ -135,7 +135,7 @@
   .gallery-card{border:none;background:none;padding:0;text-align:left;color:inherit;text-decoration:none;display:block}
   .gallery-card:hover .serif-h{color:#3a5170}
   .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e4edf7;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#7a9cc6;padding:16px;box-sizing:border-box;text-align:center}
-  .page-pad{padding:100px 0 120px}
+  .page-pad{padding:100px 0 120px;background:#fffdfa}
   .cta-link{display:inline-block}
   .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .inquiry-form{max-width:100%}
