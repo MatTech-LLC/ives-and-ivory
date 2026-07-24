@@ -60,10 +60,10 @@
   .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:#48576b;margin:0}
   .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a97a8;margin:20px 0 10px;font-weight:600}
   .service-includes{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond';font-size:17px;line-height:1.85;color:#48576b;columns:2;column-gap:20px}
-  .service-includes li{border-left:2px solid #e4edf7;padding-left:12px;margin-bottom:5px;break-inside:avoid}
+  .service-includes li{border-left:2px solid #3a5170;padding-left:12px;margin-bottom:5px;break-inside:avoid}
   .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:#48576b;margin:0 0 12px}
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-family:'Cormorant Garamond';font-size:17px;line-height:1.9;color:#48576b;margin:0;padding:0}
-  .list-grid-2 li{border-left:2px solid #e4edf7;padding-left:12px}
+  .list-grid-2 li{border-left:2px solid #3a5170;padding-left:12px}
   @media (max-width:768px){
     .services-hero-overlay{padding-top:24px !important}
     .services-lede-break{display:inline !important}
@@ -150,10 +150,12 @@
     border:none;border-bottom:1px solid rgba(28,43,61,.25);background:transparent;
     padding:8px 2px;border-radius:0;width:100%;box-sizing:border-box;
   }
+  .inquiry-input::placeholder{font-family:'Cormorant Garamond',serif;font-style:italic;color:#8a97a8;opacity:1}
   select.inquiry-input{font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b}
   select.inquiry-input option{font-family:'Cormorant Garamond',serif}
   .inquiry-textarea{border:1px solid rgba(28,43,61,.25);padding:12px;resize:vertical;min-height:120px}
   .inquiry-input--date{
+    font-family:'Cormorant Garamond',serif;font-size:17px;color:#48576b;
     min-height:40px;color-scheme:light;position:relative;
   }
   .inquiry-input--date::-webkit-calendar-picker-indicator{
