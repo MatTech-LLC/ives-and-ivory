@@ -141,7 +141,7 @@
   .inquiry-form{max-width:100%}
   .inquiry-hint{font-size:13px;color:#8a97a8;margin:0 0 28px;text-align:center}
   .inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
-  .inquiry-label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#48576b}
+  .inquiry-label{display:flex;flex-direction:column;gap:6px;font-family:'Cormorant Garamond',serif;font-size:16px;color:#48576b}
   .inquiry-label--full{grid-column:1/-1}
   .inquiry-label--block{margin-top:28px}
   .inquiry-help{font-size:13px;color:#8a97a8}
