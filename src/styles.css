@@ -13,7 +13,7 @@
   @keyframes ii-fade{0%,12.4%{opacity:1}14.3%,99%{opacity:0}100%{opacity:1}}
   .container{max-width:760px;margin:0 auto;padding:0 32px}
   .divider{width:36px;height:1px;background:#c9b98f;margin:28px auto}
-  .quotemark{font-family:'Cormorant Garamond';font-size:64px;color:#c7d5e8;line-height:1;font-style:italic}
+  .quotemark{font-family:'Cormorant Garamond';font-size:64px;color:#e4edf7;line-height:1;font-style:italic}
   .marquee-track{display:flex;width:max-content;animation:marquee-scroll 26s linear infinite}
   @keyframes marquee-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -37,8 +37,8 @@
   .nav-toggle-spacer{width:40px;flex:none}
   .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2;gap:18px;padding:0 28px;box-sizing:border-box}
   .hero-copy .hero-title{font-size:58px;font-weight:500;letter-spacing:.06em;color:#f4f1eb}
-  .hero-copy .hero-tagline{font-style:italic;font-size:26px;letter-spacing:.02em;color:#fff;font-weight:400;text-wrap:pretty;text-shadow:0 2px 10px rgba(0,0,0,.35)}
-  .hero-copy .hero-lede{font-size:19px;line-height:1.7;color:#fff;max-width:640px;text-wrap:pretty;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .hero-copy .hero-tagline{font-style:italic;font-size:26px;letter-spacing:.02em;color:#fffdfa;font-weight:400;text-wrap:pretty;text-shadow:0 2px 10px rgba(0,0,0,.35)}
+  .hero-copy .hero-lede{font-size:19px;line-height:1.7;color:#fffdfa;max-width:640px;text-wrap:pretty;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,.35)}
   .services-page{padding:0 0 120px;background:#fffdfa}
   .services-panel{padding:0}
   .services-panel-alt{padding:0}
@@ -46,13 +46,13 @@
   .wedding-tab-switch{display:flex;justify-content:center;gap:0;margin:30px auto 0;max-width:420px;border:1px solid rgba(58,81,112,.3);border-radius:30px;overflow:hidden}
   .wedding-tab-label{flex:1;text-align:center;padding:13px 20px;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#3a5170;cursor:pointer;transition:background .2s ease,color .2s ease}
   #tab-wedding-day:checked ~ .wedding-tab-switch label[for="tab-wedding-day"],
-  #tab-wedding-weekend:checked ~ .wedding-tab-switch label[for="tab-wedding-weekend"]{background:#7a9cc6;color:#fff}
+  #tab-wedding-weekend:checked ~ .wedding-tab-switch label[for="tab-wedding-weekend"]{background:#7a9cc6;color:#fffdfa}
   .wedding-tab-panel{display:none;margin-top:34px}
   #tab-wedding-day:checked ~ #panel-wedding-day{display:block}
   #tab-wedding-weekend:checked ~ #panel-wedding-weekend{display:block}
-  .wedding-col{background:#fff;border:1px solid rgba(28,43,61,.1);border-radius:4px;padding:40px 34px;display:flex;flex-direction:column;gap:28px;max-width:640px;margin:0 auto}
+  .wedding-col{background:#fffdfa;border:1px solid rgba(28,43,61,.1);border-radius:4px;padding:40px 34px;display:flex;flex-direction:column;gap:28px;max-width:640px;margin:0 auto}
   .wedding-col-intro{text-align:center;padding-bottom:28px;border-bottom:1px solid rgba(58,81,112,.14)}
-  .service-package{background:#f9fafc;border:1px solid rgba(58,81,112,.14);border-radius:6px;padding:26px 24px}
+  .service-package{background:#e4edf7;border:1px solid rgba(58,81,112,.14);border-radius:6px;padding:26px 24px}
   .service-badge{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:14px}
   .service-badge.is-complete{color:#3a5170;background:#e4edf7}
   .service-badge.is-partial{color:#8a6d3b;background:#f0e6d2}
@@ -60,10 +60,10 @@
   .service-package p{font-family:'Cormorant Garamond';font-size:16px;line-height:1.7;color:#48576b;margin:0}
   .service-includes-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8a97a8;margin:20px 0 10px;font-weight:600}
   .service-includes{list-style:none;margin:0;padding:0;font-family:'Cormorant Garamond';font-size:17px;line-height:1.85;color:#48576b;columns:2;column-gap:20px}
-  .service-includes li{border-left:2px solid #b9c9e0;padding-left:12px;margin-bottom:5px;break-inside:avoid}
+  .service-includes li{border-left:2px solid #e4edf7;padding-left:12px;margin-bottom:5px;break-inside:avoid}
   .service-includes-note{font-family:'Cormorant Garamond';font-style:italic;font-size:15px;color:#48576b;margin:0 0 12px}
   .list-grid-2{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;font-family:'Cormorant Garamond';font-size:17px;line-height:1.9;color:#48576b;margin:0;padding:0}
-  .list-grid-2 li{border-left:2px solid #b9c9e0;padding-left:12px}
+  .list-grid-2 li{border-left:2px solid #e4edf7;padding-left:12px}
   @media (max-width:768px){
     .services-hero-overlay{padding-top:24px !important}
     .services-lede-break{display:inline !important}
@@ -136,17 +136,17 @@
   .gallery-photo-grid{column-count:2;column-gap:28px}
   .gallery-card{border:none;background:none;padding:0;text-align:left;color:inherit;text-decoration:none;display:block}
   .gallery-card:hover .serif-h{color:#3a5170}
-  .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e8eef5;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#7a9cc6;padding:16px;box-sizing:border-box;text-align:center}
+  .gallery-placeholder{width:100%;aspect-ratio:4/3;margin-bottom:14px;background:#e4edf7;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond';font-style:italic;font-size:16px;color:#7a9cc6;padding:16px;box-sizing:border-box;text-align:center}
   .page-pad{padding:100px 0 120px}
   .cta-link{display:inline-block}
   .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .inquiry-form{max-width:100%}
-  .inquiry-hint{font-size:13px;color:#8b97a6;margin:0 0 28px;text-align:center}
+  .inquiry-hint{font-size:13px;color:#8a97a8;margin:0 0 28px;text-align:center}
   .inquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
   .inquiry-label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#48576b}
   .inquiry-label--full{grid-column:1/-1}
   .inquiry-label--block{margin-top:28px}
-  .inquiry-help{font-size:13px;color:#8b97a6}
+  .inquiry-help{font-size:13px;color:#8a97a8}
   .inquiry-input{
     font-family:'Jost',system-ui,sans-serif;font-size:15px;color:#1c2b3d;
     border:none;border-bottom:1px solid rgba(28,43,61,.25);background:transparent;
