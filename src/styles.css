@@ -68,7 +68,7 @@
     .about-hero-heading{font-size:32px !important;line-height:1.45 !important}
     .services-hero-strip{margin:16px -20px 40px !important;width:calc(100% + 40px)}
     .welcome-bags-banner{margin-left:-20px !important;margin-right:-20px !important;width:calc(100% + 40px);border-radius:0 !important}
-    .welcome-bags-banner-img{object-position:center 68% !important}
+    .welcome-bags-banner-img{object-position:center 88% !important;height:15vh !important}
     .experience-rotator-card{padding:36px 22px 32px;min-height:150px}
     .experience-rotator-text{left:18px;right:18px;font-size:18px}
     .kind-words-heading{order:-1;text-align:center}
