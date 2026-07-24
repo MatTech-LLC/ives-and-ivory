@@ -10,7 +10,7 @@
   .navlink:hover{color:#3a5170}
   .ii-slideshow{position:absolute;inset:0;overflow:hidden}
   .ii-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:1;transform:translateX(100%);animation:ii-swipe 35s infinite}
-  @keyframes ii-swipe{0%{transform:translateX(100%)}2.571%{transform:translateX(0%)}11.714%{transform:translateX(0%)}14.286%{transform:translateX(-100%)}14.287%{transform:translateX(100%)}100%{transform:translateX(100%)}}
+  @keyframes ii-swipe{0%{transform:translateX(100%)}2.571%{transform:translateX(0%)}11.714%{transform:translateX(0%)}14.286%{transform:translateX(-100%)}100%{transform:translateX(-100%)}}
   .container{max-width:760px;margin:0 auto;padding:0 32px}
   .divider{width:36px;height:1px;background:#c9b98f;margin:28px auto}
   .quotemark{font-family:'Cormorant Garamond';font-size:64px;color:#e4edf7;line-height:1;font-style:italic}
