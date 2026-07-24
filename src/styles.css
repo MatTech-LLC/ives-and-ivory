@@ -97,11 +97,13 @@
   a.navlink, a.site-logo-btn{display:inline-block;text-decoration:none}
   a.site-logo-btn{line-height:0}
   .navlink.is-active{color:#3a5170}
+  .my-story-photo{width:100%;aspect-ratio:3/2;overflow:hidden;margin:0 0 24px;border-radius:2px}
   @media (min-width:769px){
     .site-nav .nav-home-link{display:none}
     .site-nav .navlink{position:relative;padding-bottom:4px}
     .site-nav .navlink.is-active{color:#3a5170}
     .site-nav .navlink.is-active::after{content:"";position:absolute;left:50%;bottom:0;width:14px;height:1px;background:currentColor;transform:translateX(-50%);opacity:.75}
+    .my-story-photo{float:left;width:480px;aspect-ratio:3/2;margin:6px 40px 24px 0}
   }
   .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 36px;text-align:left}
   .gallery-photo-grid{column-count:2;column-gap:28px}
