@@ -359,6 +359,10 @@
       var current = slides[idx];
       var nextIdx = (idx + 1) % slides.length;
       var next = slides[nextIdx];
+      next.style.transition = 'none';
+      next.style.transform = '';
+      void next.offsetWidth;
+      next.style.transition = '';
       current.classList.remove('is-active');
       current.classList.add('is-prev');
       next.classList.add('is-active');
