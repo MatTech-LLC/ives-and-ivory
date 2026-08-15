@@ -120,6 +120,14 @@ const pages = [
       'Let\'s create something meaningful. Tell me about your celebration and I\'ll be in touch within 1–2 business days.',
   },
   {
+    file: 'privacy.html',
+    out: 'privacy/index.html',
+    path: '/privacy',
+    active: '',
+    title: 'Privacy Policy | Ives & Ivory Events',
+    description: 'How Ives & Ivory Events collects, uses, and protects your information.',
+  },
+  {
     file: 'testimonials.html',
     out: 'testimonials/index.html',
     path: '/testimonials',
