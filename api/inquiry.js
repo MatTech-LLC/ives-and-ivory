@@ -1,3 +1,5 @@
+import { getVercelOidcToken } from '@vercel/oidc';
+import { ExternalAccountClient } from 'google-auth-library';
 import { google } from 'googleapis';
 import { INQUIRY_COLUMNS, INQUIRY_RANGE } from './inquiry-schema.js';
 
@@ -7,10 +9,28 @@ function str(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
-function getPrivateKey() {
-  const key = process.env.GOOGLE_PRIVATE_KEY;
-  if (!key) return '';
-  return key.replace(/\\n/g, '\n');
+/**
+ * Keyless Google auth: Vercel's OIDC token is exchanged through Workload
+ * Identity Federation for short-lived credentials that impersonate the
+ * service account. No private key is stored anywhere.
+ */
+function getGoogleAuthClient() {
+  const projectNumber = process.env.GCP_PROJECT_NUMBER;
+  const poolId = process.env.GCP_WORKLOAD_IDENTITY_POOL_ID;
+  const providerId = process.env.GCP_WORKLOAD_IDENTITY_POOL_PROVIDER_ID;
+  const serviceAccountEmail = process.env.GCP_SERVICE_ACCOUNT_EMAIL;
+
+  if (!projectNumber || !poolId || !providerId || !serviceAccountEmail) return null;
+
+  return ExternalAccountClient.fromJSON({
+    type: 'external_account',
+    audience: `//iam.googleapis.com/projects/${projectNumber}/locations/global/workloadIdentityPools/${poolId}/providers/${providerId}`,
+    subject_token_type: 'urn:ietf:params:oauth:token-type:jwt',
+    token_url: 'https://sts.googleapis.com/v1/token',
+    service_account_impersonation_url: `https://iamcredentials.googleapis.com/v1/projects/-/serviceAccounts/${serviceAccountEmail}:generateAccessToken`,
+    subject_token_supplier: { getSubjectToken: () => getVercelOidcToken() },
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
 }
 
 export default async function handler(req, res) {
@@ -88,22 +108,15 @@ export default async function handler(req, res) {
     return res.status(400).json({ ok: false, error: 'Invalid event date' });
   }
 
-  const email = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-  const privateKey = getPrivateKey();
+  const auth = getGoogleAuthClient();
   const sheetId = process.env.GOOGLE_SHEET_ID;
 
-  if (!email || !privateKey || !sheetId) {
+  if (!auth || !sheetId) {
     console.error('Missing Google Sheets env vars');
     return res.status(500).json({ ok: false, error: 'Server configuration error' });
   }
 
   try {
-    const auth = new google.auth.JWT({
-      email,
-      key: privateKey,
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
-
     const sheets = google.sheets({ version: 'v4', auth });
     const row = INQUIRY_COLUMNS.map((col) => payload[col.key] ?? '');
 
